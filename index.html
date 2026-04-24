@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ядрин купеческий: тайны старых фундаментов — Автобусно-пешеходная экскурсия</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #8e44ad;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(142, 68, 173, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #6c3483;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(142, 68, 173, 0.6);
+        }
+
+        /* Панорама города */
+        .panorama {
+            width: 100%;
+            max-width: 790px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .panorama-container {
+            text-align: center;
+            padding: 40px 20px 20px;
+            background: white;
+        }
+
+        .panorama-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)), 
+                        url('https://ic.pics.livejournal.com/dshalikov/78166202/818079/818079_original.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 80px 20px;
+            min-height: 500px;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(5px);
+            padding: 10px 25px;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        /* Преимущества */
+        .highlights {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: -50px auto 50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .highlight-card {
+            background: white;
+            flex: 1;
+            min-width: 220px;
+            margin: 0 10px;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .highlight-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .highlight-card h3 {
+            color: #8e44ad;
+            margin-bottom: 10px;
+        }
+
+        /* О маршруте */
+        .about {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .about-grid {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Программа */
+        .route {
+            padding: 80px 0;
+            background-color: #f4f0f8;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 25px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid #8e44ad;
+        }
+
+        .stop-name {
+            font-weight: 700;
+            color: #8e44ad;
+            min-width: 250px;
+            font-size: 1.1rem;
+        }
+
+        /* Объекты показа */
+        .objects {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .object-grid {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .object-card {
+            flex: 1;
+            min-width: 280px;
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .object-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .object-card h4 {
+            color: #8e44ad;
+            margin: 10px 0;
+        }
+
+        /* Гид */
+        .guide {
+            padding: 80px 0;
+            background: #f4f0f8;
+            text-align: center;
+        }
+
+        .guide-card {
+            display: inline-block;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 400px;
+        }
+
+        .guide-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #8e44ad;
+        }
+
+        /* Цена и CTA */
+        .pricing {
+            padding: 80px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .price-box {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 40px 60px;
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+
+        .price {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #f1c40f;
+        }
+
+        .details {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .details li {
+            padding: 5px 0;
+        }
+
+        .footer {
+            background: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .highlights {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+            .highlight-card {
+                margin-bottom: 20px;
+            }
+            .timeline-item {
+                flex-direction: column;
+            }
+            .stop-name {
+                min-width: auto;
+                margin-bottom: 10px;
+            }
+            .panorama {
+                max-width: 100%;
+            }
+        }
+        /* Фотогалерея */
+        .gallery {
+            padding: 80px 0;
+            background: #f4f0f8;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 20px 15px 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .caption {
+            opacity: 1;
+        }
+
+        /* Лайтбокс (увеличенное фото) */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .lightbox .lightbox-caption {
+            color: white;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 3rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            z-index: 1001;
+        }
+
+        .lightbox .close:hover {
+            transform: scale(1.2);
+        }
+
+        .lightbox .nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 3rem;
+            cursor: pointer;
+            padding: 20px;
+            transition: all 0.3s ease;
+            user-select: none;
+            z-index: 1001;
+        }
+
+        .lightbox .nav:hover {
+            color: #8e44ad;
+        }
+
+        .lightbox .prev {
+            left: 20px;
+        }
+
+        .lightbox .next {
+            right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .lightbox .nav {
+                font-size: 2rem;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <!-- 1. Главный экран -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="badge">🏛️ 435 лет истории • Чувашия</div>
+            <h1>Ядрин купеческий: тайны старых фундаментов</h1>
+            <p class="subtitle">Автобусно-пешеходная экскурсия по историческому центру и усадьбе Таланцевых</p>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem;">📍 Старт из Чебоксар | 🚌 + 👣 8,4 км | ⏳ 5,5 часов с дорогой</p>
+            <a href="#book" class="btn">Забронировать место</a>
+        </div>
+    </header>
+
+    <!-- 2. Ключевые преимущества -->
+    <div class="container highlights">
+        <div class="highlight-card">
+            <div class="icon">🏛️</div>
+            <h3>16 объектов</h3>
+            <p>От парка «Старый город» до спиртзавода Таланцевых</p>
+        </div>
+        <div class="highlight-card">
+            <div class="icon">📜</div>
+            <h3>Купеческая история</h3>
+            <p>Династии Мордвиновых, Таланцевых, Бурашниковых</p>
+        </div>
+        <div class="highlight-card">
+            <div class="icon">🎭</div>
+            <h3>Знаменитые имена</h3>
+            <p>Народный артист СССР Н. Мордвинов, кинорежиссёр А. Куросава</p>
+        </div>
+    </div>
+
+    <!-- 3. О маршруте -->
+    <section class="about">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2 style="text-align: left;">Погрузитесь в атмосферу уездного купеческого города</h2>
+                <p>Мы проедем 174 км от Чебоксар до Ядрина и обратно, чтобы увидеть уникальные памятники архитектуры XVIII–XX веков. Вы пройдете по старинным улицам, где каждый дом хранит историю купеческих династий, узнаете о судьбе семьи Таланцевых и увидите места, связанные с легендарным актёром Николаем Мордвиновым.</p>
+                <br>
+                <p><strong>В программе:</strong> Свято-Троицкий собор (федеральный памятник!), дом-музей Мордвинова, Алексеевская церковь, бывшее реальное училище, тюремный замок, глазная лечебница и многое другое.</p>
+                <br>
+                <a href="#book" class="btn">Хочу в Ядрин!</a>
+            </div>
+            <div class="about-image">
+                <img src="https://ic.pics.livejournal.com/dshalikov/78166202/824139/824139_original.jpg" alt="Историческая архитектура Ядрина">
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Программа по объектам -->
+    <section class="route">
+        <div class="container">
+            <h2>Маршрут экскурсии</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="stop-name">🚌 Выезд из Чебоксар</span>
+                    <span>Отправление от Пригородного автовокзала. Путевая информация.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="stop-name">🌳 Парк «Старый город»</span>
+                    <span>Топиарные медведи, вид на Суру, история съёмок фильма «Дерсу Узала».</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="stop-name">✈️ Самолёт L-29 «Дельфин»</span>
+                    <span>Памятник Герою Советского Союза, лётчику Ф. Орлову.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="stop-name">🏠 Дом-музей Н.Д. Мордвинова</span>
+                    <span>Купеческий дом 1880 г., родословная и творчество великого актёра.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="stop-name">⛪ Алексеевская церковь</span>
+                    <span>Уникальный пятиглавый храм 1856 г. и старое кладбище.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="stop-name">🏢 Дома Бурашникова и Железнова</span>
+                    <span>Купеческое соперничество в архитектуре. Музей чувашского хмеля.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="stop-name">🔥 Площадь Победы</span>
+                    <span>Памятник воинам-землякам, Вечный огонь, пушка ЗИС-3.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="stop-name">⛪ Свято-Троицкий собор</span>
+                    <span>Главная жемчужина Ядрина, памятник архитектуры федерального значения.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="stop-name">🏥 Глазная лечебница</span>
+                    <span>Ныне художественно-краеведческий музей. Построена Таланцевыми.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="stop-name">🏫 Реальное училище</span>
+                    <span>Национальная гимназия, где учился Н. Мордвинов.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="stop-name">🏭 Янибяковская усадьба</span>
+                    <span>Жилой корпус и спиртовой завод братьев Таланцевых.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="stop-name">🚌 Возвращение в Чебоксары</span>
+                    <span>Подведение итогов, ответы на вопросы.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Ключевые объекты -->
+    <section class="objects">
+        <div class="container">
+            <h2>Главные точки маршрута</h2>
+            <div class="object-grid">
+                <div class="object-card">
+                    <div style="font-size: 3rem;">⛪</div>
+                    <h4>Свято-Троицкий собор</h4>
+                    <p>Объект культурного наследия федерального значения. Построен в 1785–1829 гг.</p>
+                </div>
+                <div class="object-card">
+                    <div style="font-size: 3rem;">🏛️</div>
+                    <h4>Здание Земского собрания</h4>
+                    <p>1879 год. Сегодня — центральная районная библиотека.</p>
+                </div>
+                <div class="object-card">
+                    <div style="font-size: 3rem;">🎭</div>
+                    <h4>Дом-музей Н.Д. Мордвинова</h4>
+                    <p>Купеческий дом 1880 г., где родился народный артист СССР.</p>
+                </div>
+                <div class="object-card">
+                    <div style="font-size: 3rem;">🏭</div>
+                    <h4>Ядринский спиртзавод</h4>
+                    <p>Основан Таланцевыми в 1863 г. Действует по сей день.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Фотогалерея -->
+    <section class="gallery">
+        <div class="container">
+            <h2>Фотогалерея Ядрина</h2>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Фото 1 -->
+                <div class="gallery-item" onclick="openLightbox(0)">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/837295/837295_original.jpg" 
+                         alt="Краеведческий музей" 
+                         loading="lazy">
+                    <div class="caption">Краеведческий музей</div>
+                </div>
+                
+                <!-- Фото 2 -->
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/836097/836097_original.jpg" 
+                         alt="Улицы" 
+                         loading="lazy">
+                    <div class="caption">Улицы старого Ядрина</div>
+                </div>
+                
+                <!-- Фото 3 -->
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/829071/829071_original.jpg" 
+                         alt="Сурские просторы" 
+                         loading="lazy">
+                    <div class="caption">Вид на р. Сура</div>
+                </div>
+                
+                <!-- Фото 4 -->
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/835989/835989_original.jpg" 
+                         loading="lazy">
+                    <div class="caption">Купеческая архитектура</div>
+                </div>
+                
+                <!-- Фото 5 -->
+                <div class="gallery-item" onclick="openLightbox(4)">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/833690/833690_original.jpg" 
+                         loading="lazy">
+                    <div class="caption">Свято-Троицкий собор</div>
+                </div>
+                
+                <!-- Фото 6 -->
+                <div class="gallery-item" onclick="openLightbox(5)">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/838421/838421_original.jpg" 
+                         alt="Старое кладбище" 
+                         loading="lazy">
+                    <div class="caption">Старое кладбище</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Лайтбокс для просмотра фото -->
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <span class="nav prev" onclick="changePhoto(-1)">&#10094;</span>
+        <span class="nav next" onclick="changePhoto(1)">&#10095;</span>
+        <img src="" alt="" id="lightboxImg">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <!-- 6. Гид -->
+    <section class="guide">
+        <div class="container">
+            <h2>Ваш экскурсовод</h2>
+            <div class="guide-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BOGY2OGY2MDctYTU4ZS00ZWUzLWFjYTktYjgyNDczM2VkYTZkXkEyXkFqcGdeQXVyMzAzOTUwOTY@._V1_QL75_UX820_.jpg" alt="Экскурсовод Денис Леонтьев">
+                <h3>Денис Леонтьев</h3>
+                <p>Студент историко-географического факультета ЧГУ им. И.Н. Ульянова, кафедра социально-экономической географии и туризма. Автор экскурсии.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Цена и бронирование -->
+    <section class="pricing" id="book">
+        <div class="container">
+            <h2>Детали и бронирование</h2>
+            <div class="price-box">
+                <p style="font-size: 1.3rem;">Стоимость экскурсии</p>
+                <p class="price">от 2 500 ₽</p>
+                <p>за человека (ориентировочно)</p>
+                <ul class="details">
+                    <li>🚌 Трансфер Чебоксары – Ядрин – Чебоксары</li>
+                    <li>👣 Пешеходная часть ~ 8,4 км</li>
+                    <li>⏳ Общая продолжительность — 5,5 часов</li>
+                    <li>📅 По предварительной записи</li>
+                    <li>👥 Группы от 10 человек</li>
+                </ul>
+                <a href="form.html" class="btn">Записаться на экскурсию</a>
+                <p style="margin-top: 20px; font-size: 0.85rem;">* Точная стоимость и даты согласовываются при бронировании.</p>
+            </div>
+            <p style="margin-top: 30px;">По всем вопросам: <strong>+7 (908) 306-58-35</strong> | <strong>ydrin-excurs21@gmail.com</strong></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Экскурсионный проект «Ядрин купеческий». ЧГУ им. И.Н. Ульянова. Все права защищены.</p>
+        <p style="font-size: 0.8rem; margin-top: 5px;">Материал подготовлен на основе контрольного текста экскурсии Леонтьева Д.А.</p>
+
+        <!-- Новая строка с ссылкой на Владивосток -->
+        <p style="font-size: 0.75rem; margin-top: 15px; opacity: 0.6;">
+            <a href="Визуализация туристского продукта - Фотогалерея.pdf" style="color: #aaa; text-decoration: underline;">Также предлагаем туры во Владивосток →</a>
+        </p>
+    </footer>
+
+    <script>
+        // Данные галереи
+        const galleryImages = [
+            {
+                src: 'https://ic.pics.livejournal.com/dshalikov/78166202/837295/837295_original.jpg',
+                caption: 'Краеведческий музей'
+            },
+            {
+                src: 'https://ic.pics.livejournal.com/dshalikov/78166202/836097/836097_original.jpg',
+                caption: 'Улицы старого Ядрина'
+            },
+            {
+                src: 'https://ic.pics.livejournal.com/dshalikov/78166202/829071/829071_original.jpg',
+                caption: 'Вид на р. Сура'
+            },
+            {
+                src: 'https://ic.pics.livejournal.com/dshalikov/78166202/835989/835989_original.jpg',
+                caption: 'Купеческая архитектура'
+            },
+            {
+                src: 'https://ic.pics.livejournal.com/dshalikov/78166202/833690/833690_original.jpg',
+                caption: 'Свято-Троицкий собор'
+            },
+            {
+                src: 'https://ic.pics.livejournal.com/dshalikov/78166202/838421/838421_original.jpg',
+                caption: 'Старое кладбище'
+            }
+        ];
+
+        let currentPhotoIndex = 0;
+
+        function openLightbox(index) {
+            currentPhotoIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightboxImg');
+            const caption = document.getElementById('lightboxCaption');
+            
+            img.src = galleryImages[index].src;
+            caption.textContent = galleryImages[index].caption;
+            lightbox.classList.add('active');
+            
+            // Запрещаем скролл страницы
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            
+            // Возвращаем скролл
+            document.body.style.overflow = 'auto';
+        }
+
+        function changePhoto(direction) {
+            currentPhotoIndex += direction;
+            
+            // Зацикливаем галерею
+            if (currentPhotoIndex >= galleryImages.length) {
+                currentPhotoIndex = 0;
+            }
+            if (currentPhotoIndex < 0) {
+                currentPhotoIndex = galleryImages.length - 1;
+            }
+            
+            const img = document.getElementById('lightboxImg');
+            const caption = document.getElementById('lightboxCaption');
+            
+            img.src = galleryImages[currentPhotoIndex].src;
+            caption.textContent = galleryImages[currentPhotoIndex].caption;
+        }
+
+        // Закрытие по клику на тёмный фон
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Закрытие по клавише Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+            // Стрелки влево/вправо для навигации
+            if (e.key === 'ArrowLeft') {
+                changePhoto(-1);
+            }
+            if (e.key === 'ArrowRight') {
+                changePhoto(1);
+            }
+        });
+    </script>
+
+</body>
+</html>

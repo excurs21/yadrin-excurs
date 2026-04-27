@@ -715,32 +715,80 @@
         <div class="container">
             <h2>Фотогалерея Ядрина</h2>
             <div class="gallery-grid" id="galleryGrid">
+                <!-- Фото 1 -->
                 <div class="gallery-item" onclick="openLightbox(0)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/837295/837295_original.jpg" alt="Краеведческий музей" loading="lazy">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/837295/837295_original.jpg" 
+                         alt="Краеведческий музей" 
+                         loading="lazy">
                     <div class="caption">Краеведческий музей</div>
                 </div>
+                
+                <!-- Фото 2 — НОВОЕ: Музей чувашского хмеля -->
                 <div class="gallery-item" onclick="openLightbox(1)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/836097/836097_original.jpg" alt="Улицы" loading="lazy">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/835617/835617_original.jpg" 
+                         alt="Музей чувашского хмеля" 
+                         loading="lazy">
+                    <div class="caption">Музей чувашского хмеля</div>
+                </div>
+                
+                <!-- Фото 3 -->
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/836097/836097_original.jpg" 
+                         alt="Улицы" 
+                         loading="lazy">
                     <div class="caption">Улицы старого Ядрина</div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(2)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/829071/829071_original.jpg" alt="Сурские просторы" loading="lazy">
+                
+                <!-- Фото 4 -->
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/829071/829071_original.jpg" 
+                         alt="Сурские просторы" 
+                         loading="lazy">
                     <div class="caption">Вид на р. Сура</div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(3)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/835989/835989_original.jpg" alt="Купеческая архитектура" loading="lazy">
+                
+                <!-- Фото 5 — НОВОЕ: Гимназия №1 -->
+                <div class="gallery-item" onclick="openLightbox(4)">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/843662/843662_original.jpg" 
+                         alt="Ядринская гимназия №1" 
+                         loading="lazy">
+                    <div class="caption">Ядринская гимназия №1</div>
+                </div>
+                
+                <!-- Фото 6 -->
+                <div class="gallery-item" onclick="openLightbox(5)">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/835989/835989_original.jpg" 
+                         alt="Купеческая архитектура"
+                         loading="lazy">
                     <div class="caption">Купеческая архитектура</div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(4)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/833690/833690_original.jpg" alt="Свято-Троицкий собор" loading="lazy">
+                
+                <!-- Фото 7 — НОВОЕ: Самолёт Л-29 -->
+                <div class="gallery-item" onclick="openLightbox(6)">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/821880/821880_original.jpg" 
+                         alt="Самолёт Л-29 Дельфин" 
+                         loading="lazy">
+                    <div class="caption">Самолёт Л-29 «Дельфин»</div>
+                </div>
+                
+                <!-- Фото 8 -->
+                <div class="gallery-item" onclick="openLightbox(7)">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/833690/833690_original.jpg" 
+                         alt="Свято-Троицкий собор"
+                         loading="lazy">
                     <div class="caption">Свято-Троицкий собор</div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(5)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/838421/838421_original.jpg" alt="Старое кладбище" loading="lazy">
+                
+                <!-- Фото 9 -->
+                <div class="gallery-item" onclick="openLightbox(8)">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/838421/838421_original.jpg" 
+                         alt="Старое кладбище" 
+                         loading="lazy">
                     <div class="caption">Старое кладбище</div>
                 </div>
             </div>
         </div>
+    </section>
     </section>
 
     <!-- Лайтбокс -->
@@ -813,13 +861,17 @@
     </footer>
 
     <script>
+        // Данные галереи
         const galleryImages = [
-            { src: 'https://ic.pics.livejournal.com/dshalikov/78166202/837295/837295_original.jpg', caption: 'Краеведческий музей' },
-            { src: 'https://ic.pics.livejournal.com/dshalikov/78166202/836097/836097_original.jpg', caption: 'Улицы старого Ядрина' },
-            { src: 'https://ic.pics.livejournal.com/dshalikov/78166202/829071/829071_original.jpg', caption: 'Вид на р. Сура' },
-            { src: 'https://ic.pics.livejournal.com/dshalikov/78166202/835989/835989_original.jpg', caption: 'Купеческая архитектура' },
-            { src: 'https://ic.pics.livejournal.com/dshalikov/78166202/833690/833690_original.jpg', caption: 'Свято-Троицкий собор' },
-            { src: 'https://ic.pics.livejournal.com/dshalikov/78166202/838421/838421_original.jpg', caption: 'Старое кладбище' }
+            {src: 'https://ic.pics.livejournal.com/dshalikov/78166202/837295/837295_original.jpg', caption: 'Краеведческий музей'},
+            {src: 'https://ic.pics.livejournal.com/dshalikov/78166202/835617/835617_original.jpg', caption: 'Музей чувашского хмеля'},
+            {src: 'https://ic.pics.livejournal.com/dshalikov/78166202/836097/836097_original.jpg', caption: 'Улицы старого Ядрина'},
+            {src: 'https://ic.pics.livejournal.com/dshalikov/78166202/829071/829071_original.jpg', caption: 'Вид на р. Сура'},
+            {src: 'https://ic.pics.livejournal.com/dshalikov/78166202/843662/843662_original.jpg', caption: 'Ядринская гимназия №1'},
+            {src: 'https://ic.pics.livejournal.com/dshalikov/78166202/835989/835989_original.jpg', caption: 'Купеческая архитектура'},
+            {src: 'https://ic.pics.livejournal.com/dshalikov/78166202/821880/821880_original.jpg', caption: 'Самолёт Л-29 «Дельфин»'},
+            {src: 'https://ic.pics.livejournal.com/dshalikov/78166202/833690/833690_original.jpg', caption: 'Свято-Троицкий собор'},
+            {src: 'https://ic.pics.livejournal.com/dshalikov/78166202/838421/838421_original.jpg', caption: 'Старое кладбище'}
         ];
 
         let currentPhotoIndex = 0;

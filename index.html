@@ -778,14 +778,16 @@
         }
 
         .testimonial-card .quote-icon {
-            font-size: 3rem;
+            font-size: 4rem;
             color: #8e44ad;
-            opacity: 0.3;
+            opacity: 0.15;
             position: absolute;
-            top: 15px;
-            left: 20px;
+            top: 5px;
+            left: 15px;
             font-family: 'Playfair Display', serif;
             line-height: 1;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .testimonial-card .stars {
@@ -793,6 +795,8 @@
             font-size: 1.1rem;
             margin-bottom: 12px;
             letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
         }
 
         .testimonial-card p {

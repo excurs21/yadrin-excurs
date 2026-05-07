@@ -9,12 +9,12 @@
     <link rel="icon" href="https://www.heraldicum.ru/russia/subjects/towns/images/jadrin1.gif" type="image/gif">
 
     <!-- Open Graph для соцсетей -->
-<meta property="og:title" content="Ядрин купеческий: тайны старых фундаментов">
-<meta property="og:description" content="Автобусно-пешеходная экскурсия по историческому центру Ядрина. 16 объектов, купеческие династии, Свято-Троицкий собор.">
-<meta property="og:image" content="https://ic.pics.livejournal.com/dshalikov/78166202/818079/818079_original.jpg">
-<meta property="og:url" content="https://excurs21.github.io/yadrin-excurs/">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="Ядрин купеческий: тайны старых фундаментов">
+    <meta property="og:description" content="Автобусно-пешеходная экскурсия по историческому центру Ядрина. 16 объектов, купеческие династии, Свято-Троицкий собор.">
+    <meta property="og:image" content="https://ic.pics.livejournal.com/dshalikov/78166202/818079/818079_original.jpg">
+    <meta property="og:url" content="https://excurs21.github.io/yadrin-excurs/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     
     <!-- Шрифты -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -521,54 +521,6 @@
             font-size: 0.9rem;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .highlights {
-                flex-direction: column;
-                margin-top: 20px;
-            }
-            .highlight-card {
-                margin-bottom: 20px;
-            }
-            .timeline-item {
-                flex-direction: column;
-            }
-            .stop-name {
-                min-width: auto;
-                margin-bottom: 10px;
-            }
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-            .lightbox .nav {
-                font-size: 2rem;
-                padding: 10px;
-            }
-            .map-wrapper iframe {
-                height: 350px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
         /* Кнопка FAQ */
         .faq-button {
             position: fixed;
@@ -689,7 +641,257 @@
             line-height: 1.6;
         }
 
+        /* Модальные окна для карточек преимуществ */
+        .info-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-modal.active {
+            display: flex;
+        }
+
+        .info-modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 35px 30px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.4s ease-out;
+            position: relative;
+            text-align: center;
+        }
+
+        .info-modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.3s ease;
+            line-height: 1;
+        }
+
+        .info-modal-close:hover {
+            color: #333;
+        }
+
+        .info-modal-icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .info-modal-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .info-modal-content p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        .info-modal-content ul {
+            text-align: left;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .info-modal-content ul li {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .btn-close-modal {
+            display: inline-block;
+            background: #8e44ad;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .btn-close-modal:hover {
+            background: #6c3483;
+        }
+
+        /* Отзывы */
+        .testimonials {
+            padding: 80px 0;
+            background: #f4f0f8;
+        }
+
+        .testimonials-grid {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .testimonial-card {
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .testimonial-card .quote-icon {
+            font-size: 3rem;
+            color: #8e44ad;
+            opacity: 0.3;
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+
+        .testimonial-card .stars {
+            color: #f1c40f;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-card p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .testimonial-author .author-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #8e44ad;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .testimonial-author .author-info strong {
+            display: block;
+            color: #2c3e50;
+            font-size: 0.95rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .testimonial-author .author-info span {
+            color: #999;
+            font-size: 0.8rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .testimonial-note {
+            text-align: center;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 10px;
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            color: #856404;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .highlights {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+            .highlight-card {
+                margin-bottom: 20px;
+            }
+            .timeline-item {
+                flex-direction: column;
+            }
+            .stop-name {
+                min-width: auto;
+                margin-bottom: 10px;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .lightbox .nav {
+                font-size: 2rem;
+                padding: 10px;
+            }
+            .map-wrapper iframe {
+                height: 350px;
+            }
             .faq-button {
                 bottom: 80px;
                 right: 20px;
@@ -697,8 +899,16 @@
             .faq-modal-content {
                 padding: 25px;
             }
+            .testimonial-card {
+                min-width: 100%;
+            }
         }
-        
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
     
@@ -734,7 +944,7 @@
         </div>
     </div>
     
-        <!-- Модальные окна для карточек преимуществ -->
+    <!-- Модальные окна для карточек преимуществ -->
     <div class="info-modal" id="modal-objects">
         <div class="info-modal-content">
             <button class="info-modal-close" onclick="closeInfoModal('objects')">&times;</button>
@@ -913,75 +1123,40 @@
         <div class="container">
             <h2>Фотогалерея Ядрина</h2>
             <div class="gallery-grid" id="galleryGrid">
-                <!-- Фото 1 -->
                 <div class="gallery-item" onclick="openLightbox(0)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/837295/837295_original.jpg" 
-                         alt="Краеведческий музей" 
-                         loading="lazy">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/837295/837295_original.jpg" alt="Краеведческий музей" loading="lazy">
                     <div class="caption">Краеведческий музей</div>
                 </div>
-                
-                <!-- Фото 2 — НОВОЕ: Музей чувашского хмеля -->
                 <div class="gallery-item" onclick="openLightbox(1)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/835617/835617_original.jpg" 
-                         alt="Музей чувашского хмеля" 
-                         loading="lazy">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/835617/835617_original.jpg" alt="Музей чувашского хмеля" loading="lazy">
                     <div class="caption">Музей чувашского хмеля</div>
                 </div>
-                
-                <!-- Фото 3 -->
                 <div class="gallery-item" onclick="openLightbox(2)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/836097/836097_original.jpg" 
-                         alt="Улицы" 
-                         loading="lazy">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/836097/836097_original.jpg" alt="Улицы старого Ядрина" loading="lazy">
                     <div class="caption">Улицы старого Ядрина</div>
                 </div>
-                
-                <!-- Фото 4 -->
                 <div class="gallery-item" onclick="openLightbox(3)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/829071/829071_original.jpg" 
-                         alt="Сурские просторы" 
-                         loading="lazy">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/829071/829071_original.jpg" alt="Вид на реку Сура" loading="lazy">
                     <div class="caption">Вид на р. Сура</div>
                 </div>
-                
-                <!-- Фото 5 — НОВОЕ: Гимназия №1 -->
                 <div class="gallery-item" onclick="openLightbox(4)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/843662/843662_original.jpg" 
-                         alt="Ядринская гимназия №1" 
-                         loading="lazy">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/843662/843662_original.jpg" alt="Ядринская гимназия №1" loading="lazy">
                     <div class="caption">Ядринская гимназия №1</div>
                 </div>
-                
-                <!-- Фото 6 -->
                 <div class="gallery-item" onclick="openLightbox(5)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/835989/835989_original.jpg" 
-                         alt="Купеческая архитектура"
-                         loading="lazy">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/835989/835989_original.jpg" alt="Купеческая архитектура" loading="lazy">
                     <div class="caption">Купеческая архитектура</div>
                 </div>
-                
-                <!-- Фото 7 — НОВОЕ: Самолёт Л-29 -->
                 <div class="gallery-item" onclick="openLightbox(6)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/821880/821880_original.jpg" 
-                         alt="Самолёт Л-29 Дельфин" 
-                         loading="lazy">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/821880/821880_original.jpg" alt="Самолёт Л-29 Дельфин" loading="lazy">
                     <div class="caption">Самолёт Л-29 «Дельфин»</div>
                 </div>
-                
-                <!-- Фото 8 -->
                 <div class="gallery-item" onclick="openLightbox(7)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/833690/833690_original.jpg" 
-                         alt="Свято-Троицкий собор"
-                         loading="lazy">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/833690/833690_original.jpg" alt="Свято-Троицкий собор" loading="lazy">
                     <div class="caption">Свято-Троицкий собор</div>
                 </div>
-                
-                <!-- Фото 9 -->
                 <div class="gallery-item" onclick="openLightbox(8)">
-                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/838421/838421_original.jpg" 
-                         alt="Старое кладбище" 
-                         loading="lazy">
+                    <img src="https://ic.pics.livejournal.com/dshalikov/78166202/838421/838421_original.jpg" alt="Старое кладбище" loading="lazy">
                     <div class="caption">Старое кладбище</div>
                 </div>
             </div>
@@ -997,7 +1172,55 @@
         <div class="lightbox-caption" id="lightboxCaption"></div>
     </div>
 
-    <!-- 8. Гид -->
+    <!-- 8. Отзывы -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Что говорят путешественники</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">«</div>
+                    <div class="stars">★★★★★</div>
+                    <p>Замечательная экскурсия! Столько интересных деталей о купеческом быте и архитектуре. Отдельное спасибо за рассказ о Таланцевых — впечатляет масштаб их деятельности.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">А</div>
+                        <div class="author-info">
+                            <strong>Анна К.</strong>
+                            <span>студентка ЧГУ, апрель 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">«</div>
+                    <div class="stars">★★★★★</div>
+                    <p>Очень понравился маршрут! Прошли по местам, о которых я, живя в Чувашии, даже не знал. Дом Мордвинова и старые улочки — это что-то невероятное.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">М</div>
+                        <div class="author-info">
+                            <strong>Михаил П.</strong>
+                            <span>преподаватель, май 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">«</div>
+                    <div class="stars">★★★★★</div>
+                    <p>Экскурсия — отличный повод выбраться из Чебоксар и открыть для себя Ядрин. Фотогалерея на сайте лишь малая часть того, что можно увидеть своими глазами!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">Е</div>
+                        <div class="author-info">
+                            <strong>Елена В.</strong>
+                            <span>школьный учитель, март 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <p class="testimonial-note">⚠️ Учебные отзывы. Размещены для демонстрации структуры сайта.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Гид -->
     <section class="guide">
         <div class="container">
             <h2>Ваш экскурсовод</h2>
@@ -1009,7 +1232,7 @@
         </div>
     </section>
 
-    <!-- 9. Цена и бронирование -->
+    <!-- 10. Цена и бронирование -->
     <section class="pricing" id="book">
         <div class="container">
             <h2>Детали и бронирование</h2>
@@ -1031,7 +1254,7 @@
         </div>
     </section>
 
-    <!-- 10. Футер -->
+    <!-- 11. Футер -->
     <footer class="footer">
         <p>© 2026 Учебно-экскурсионный проект «Ядрин купеческий»</p>
         <p style="font-size: 0.8rem; margin-top: 5px;">
@@ -1045,13 +1268,10 @@
         <p style="font-size: 0.7rem; opacity: 0.5; margin-top: 10px;">
             Текст экскурсии: Леонтьев Д.А. (CC BY-NC 4.0) — разрешено использование в некоммерческих целях с указанием авторства
         </p>
-        
-        <!-- Фотоматериалы -->
         <p style="font-size: 0.7rem; opacity: 0.5; margin-top: 5px;">
             Фотографии: Дмитрий Шаликов (dshalikov), LiveJournal — 
             <a href="https://dshalikov.livejournal.com" target="_blank" style="color: #aaa; text-decoration: underline;">dshalikov.livejournal.com</a>
         </p>
-      
         <p style="font-size: 0.75rem; margin-top: 15px; opacity: 0.6;">
             <a href="vladivostok-tour.pdf" style="color: #aaa; text-decoration: underline;">🚢 Также предлагаем туры во Владивосток →</a>
         </p>
@@ -1069,7 +1289,7 @@
         ↑
     </button>
 
-        <!-- Кнопка FAQ -->
+    <!-- Кнопка FAQ -->
     <button class="faq-button" onclick="openFaqModal()" title="Частые вопросы">
         ❓
     </button>
@@ -1079,42 +1299,36 @@
         <div class="faq-modal-content">
             <button class="faq-modal-close" onclick="closeFaqModal()">&times;</button>
             <h3>Частые вопросы</h3>
-            
             <div class="faq-item">
                 <details>
                     <summary>🕐 Сколько длится экскурсия?</summary>
                     <p>5,5 часов с учётом дороги из Чебоксар и обратно. Пешеходная часть — около 2 часов.</p>
                 </details>
             </div>
-            
             <div class="faq-item">
                 <details>
                     <summary>👥 Какая минимальная группа?</summary>
                     <p>Группы набираются от 10 человек. Для индивидуальных экскурсий — свяжитесь со мной лично.</p>
                 </details>
             </div>
-            
             <div class="faq-item">
                 <details>
                     <summary>🚶 Сложный ли маршрут?</summary>
                     <p>Маршрут комфортный, с остановками у каждого объекта. Подходит для людей с обычной физической подготовкой.</p>
                 </details>
             </div>
-            
             <div class="faq-item">
                 <details>
                     <summary>📅 Когда проводятся экскурсии?</summary>
                     <p>По предварительной записи. Конкретные даты согласовываются при бронировании.</p>
                 </details>
             </div>
-            
             <div class="faq-item">
                 <details>
                     <summary>🚌 Откуда отправление?</summary>
                     <p>Отправление от Пригородного автовокзала г. Чебоксары. Трансфер включён в стоимость.</p>
                 </details>
             </div>
-            
             <div class="faq-item">
                 <details>
                     <summary>🍽️ Будет ли обед?</summary>
@@ -1150,7 +1364,7 @@
 
         function closeLightbox() {
             document.getElementById('lightbox').classList.remove('active');
-            document.body.style.overflow = 'auto';
+            document.body.style.overflow = '';
         }
 
         function changePhoto(direction) {
@@ -1165,22 +1379,52 @@
             if (e.target === this) closeLightbox();
         });
 
+        // FAQ модальное окно
+        function openFaqModal() {
+            document.getElementById('faqModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFaqModal() {
+            document.getElementById('faqModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('faqModal').addEventListener('click', function(e) {
+            if (e.target === this) closeFaqModal();
+        });
+
+        // Инфо-окна для карточек преимуществ
+        function openInfoModal(type) {
+            const modalId = 'modal-' + type;
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeInfoModal(type) {
+            const modalId = 'modal-' + type;
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.querySelectorAll('.info-modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
         // Единый обработчик клавиатуры для всех модальных окон
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                // Закрыть лайтбокс
                 const lightbox = document.getElementById('lightbox');
-                if (lightbox.classList.contains('active')) {
-                    closeLightbox();
-                }
+                if (lightbox.classList.contains('active')) closeLightbox();
                 
-                // Закрыть FAQ
                 const faqModal = document.getElementById('faqModal');
-                if (faqModal.classList.contains('active')) {
-                    closeFaqModal();
-                }
+                if (faqModal.classList.contains('active')) closeFaqModal();
                 
-                // Закрыть инфо-окна
                 document.querySelectorAll('.info-modal.active').forEach(modal => {
                     modal.classList.remove('active');
                 });
@@ -1188,14 +1432,12 @@
                 document.body.style.overflow = '';
             }
             
-            // Стрелки работают только когда лайтбокс открыт
             const lightbox = document.getElementById('lightbox');
             if (lightbox.classList.contains('active')) {
                 if (e.key === 'ArrowLeft') changePhoto(-1);
                 if (e.key === 'ArrowRight') changePhoto(1);
             }
         });
-        
     </script>
 
 </body>

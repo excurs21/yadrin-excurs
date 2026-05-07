@@ -717,20 +717,75 @@
 
     <!-- 2. Ключевые преимущества -->
     <div class="container highlights">
-        <div class="highlight-card">
+        <div class="highlight-card" onclick="openInfoModal('objects')" style="cursor: pointer;">
             <div class="icon">🏛️</div>
             <h3>16 объектов</h3>
             <p>От парка «Старый город» до спиртзавода Таланцевых</p>
         </div>
-        <div class="highlight-card">
+        <div class="highlight-card" onclick="openInfoModal('history')" style="cursor: pointer;">
             <div class="icon">📜</div>
             <h3>Купеческая история</h3>
             <p>Династии Мордвиновых, Таланцевых, Бурашниковых</p>
         </div>
-        <div class="highlight-card">
+        <div class="highlight-card" onclick="openInfoModal('people')" style="cursor: pointer;">
             <div class="icon">🎭</div>
             <h3>Знаменитые имена</h3>
             <p>Народный артист СССР Н. Мордвинов, кинорежиссёр А. Куросава</p>
+        </div>
+    </div>
+    
+        <!-- Модальные окна для карточек преимуществ -->
+    <div class="info-modal" id="modal-objects">
+        <div class="info-modal-content">
+            <button class="info-modal-close" onclick="closeInfoModal('objects')">&times;</button>
+            <div class="info-modal-icon">🏛️</div>
+            <h3>16 объектов маршрута</h3>
+            <p>За время экскурсии вы увидите:</p>
+            <ul>
+                <li>🌳 Парк «Старый город» — современное благоустройство с видом на Суру</li>
+                <li>✈️ Самолёт L-29 «Дельфин» — памятник лётчику Ф. Орлову</li>
+                <li>🏠 Дом-музей Н.Д. Мордвинова — купеческий дом 1880 года</li>
+                <li>⛪ Алексеевская церковь — пятиглавый храм 1856 года</li>
+                <li>🏢 Дома Бурашникова и Железнова — купеческое соперничество в камне</li>
+                <li>🔥 Площадь Победы — мемориал с Вечным огнём</li>
+                <li>⛪ Свято-Троицкий собор — памятник федерального значения</li>
+                <li>🏥 Глазная лечебница — музей и картинная галерея</li>
+                <li>🏫 Реальное училище — ныне национальная гимназия</li>
+                <li>🏭 Янибяковская усадьба — спиртзавод и жилой корпус</li>
+            </ul>
+            <p>Маршрут: 8,4 км пешком + 174 км на автобусе из Чебоксар и обратно.</p>
+            <button class="btn-close-modal" onclick="closeInfoModal('objects')">Понятно</button>
+        </div>
+    </div>
+
+    <div class="info-modal" id="modal-history">
+        <div class="info-modal-content">
+            <button class="info-modal-close" onclick="closeInfoModal('history')">&times;</button>
+            <div class="info-modal-icon">📜</div>
+            <h3>Купеческая история Ядрина</h3>
+            <p>Ядрин был одним из значимых купеческих городов Чувашии. Три династии определили его облик:</p>
+            <ul>
+                <li><strong>Таланцевы</strong> — промышленники и меценаты. Построили винокуренный и маслобойный заводы, глазную лечебницу, реальное училище. Их называли «ядринскими Морозовыми».</li>
+                <li><strong>Мордвиновы</strong> — купцы 2-й гильдии. Из этой семьи вышел народный артист СССР Николай Мордвинов.</li>
+                <li><strong>Бурашниковы</strong> — лесопромышленники. Построили один из самых красивых особняков города в стиле модерн.</li>
+            </ul>
+            <p>В 1901 году в Ядрине проживало 46 купцов. Их дома, лавки и заводы до сих пор формируют архитектурный облик города.</p>
+            <button class="btn-close-modal" onclick="closeInfoModal('history')">Понятно</button>
+        </div>
+    </div>
+
+    <div class="info-modal" id="modal-people">
+        <div class="info-modal-content">
+            <button class="info-modal-close" onclick="closeInfoModal('people')">&times;</button>
+            <div class="info-modal-icon">🎭</div>
+            <h3>Знаменитые люди, связанные с Ядрином</h3>
+            <ul>
+                <li><strong>Николай Мордвинов</strong> (1901–1966) — народный артист СССР, актёр театра и кино. Родился в Ядрине в купеческой семье. Сыграл Котовского, Богдана Хмельницкого, Арбенина в «Маскараде».</li>
+                <li><strong>Акира Куросава</strong> (1910–1998) — легендарный японский режиссёр. В 1974 году снимал сцены ледохода для фильма «Дерсу Узала» на реке Суре у Ядрина.</li>
+                <li><strong>Федот Орлов</strong> (1913–1988) — Герой Советского Союза, лётчик-штурмовик. Уроженец Ядринского района. Совершил более 500 боевых вылетов.</li>
+                <li><strong>Тани Юн</strong> (1903–1977) — первая чувашская киноактриса. Училась в Ядринском реальном училище.</li>
+            </ul>
+            <button class="btn-close-modal" onclick="closeInfoModal('people')">Понятно</button>
         </div>
     </div>
 
@@ -1146,6 +1201,41 @@
             if (e.key === 'ArrowLeft') changePhoto(-1);
             if (e.key === 'ArrowRight') changePhoto(1);
         });
+        
+                // Модальные окна для карточек преимуществ
+        function openInfoModal(type) {
+            const modalId = 'modal-' + type;
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeInfoModal(type) {
+            const modalId = 'modal-' + type;
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Закрытие окон по клику на фон
+        document.querySelectorAll('.info-modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Обновлённый обработчик Escape (добавьте в существующий)
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                // Закрыть все открытые модальные окна
+                document.querySelectorAll('.info-modal.active, .faq-modal.active, .lightbox.active').forEach(el => {
+                    el.classList.remove('active');
+                });
+                document.body.style.overflow = '';
+            }
+        });
+        
     </script>
 
 </body>

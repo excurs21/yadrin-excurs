@@ -1165,74 +1165,34 @@
             if (e.target === this) closeLightbox();
         });
 
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowLeft') changePhoto(-1);
-            if (e.key === 'ArrowRight') changePhoto(1);
-        });
-        
-        // FAQ модальное окно
-        function openFaqModal() {
-            document.getElementById('faqModal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeFaqModal() {
-            document.getElementById('faqModal').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Закрытие FAQ по клику на тёмный фон
-        document.getElementById('faqModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeFaqModal();
-            }
-        });
-
-        // Закрытие FAQ по Escape
+        // Единый обработчик клавиатуры для всех модальных окон
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
+                // Закрыть лайтбокс
+                const lightbox = document.getElementById('lightbox');
+                if (lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+                
+                // Закрыть FAQ
                 const faqModal = document.getElementById('faqModal');
                 if (faqModal.classList.contains('active')) {
                     closeFaqModal();
                 }
-                closeLightbox();
-            }
-            if (e.key === 'ArrowLeft') changePhoto(-1);
-            if (e.key === 'ArrowRight') changePhoto(1);
-        });
-        
-                // Модальные окна для карточек преимуществ
-        function openInfoModal(type) {
-            const modalId = 'modal-' + type;
-            document.getElementById(modalId).classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeInfoModal(type) {
-            const modalId = 'modal-' + type;
-            document.getElementById(modalId).classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Закрытие окон по клику на фон
-        document.querySelectorAll('.info-modal').forEach(modal => {
-            modal.addEventListener('click', function(e) {
-                if (e.target === this) {
-                    this.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
-            });
-        });
-
-        // Обновлённый обработчик Escape (добавьте в существующий)
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                // Закрыть все открытые модальные окна
-                document.querySelectorAll('.info-modal.active, .faq-modal.active, .lightbox.active').forEach(el => {
-                    el.classList.remove('active');
+                
+                // Закрыть инфо-окна
+                document.querySelectorAll('.info-modal.active').forEach(modal => {
+                    modal.classList.remove('active');
                 });
+                
                 document.body.style.overflow = '';
+            }
+            
+            // Стрелки работают только когда лайтбокс открыт
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'ArrowLeft') changePhoto(-1);
+                if (e.key === 'ArrowRight') changePhoto(1);
             }
         });
         

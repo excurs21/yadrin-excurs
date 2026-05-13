@@ -5,47 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ядрин купеческий: тайны старых фундаментов — Автобусно-пешеходная экскурсия</title>
     
-    <!-- FAVICON -->
     <link rel="icon" href="https://www.heraldicum.ru/russia/subjects/towns/images/jadrin1.gif" type="image/gif">
-
-    <!-- Open Graph для соцсетей -->
     <meta property="og:title" content="Ядрин купеческий: тайны старых фундаментов">
     <meta property="og:description" content="Автобусно-пешеходная экскурсия по историческому центру Ядрина. 16 объектов, купеческие династии, Свято-Троицкий собор.">
     <meta property="og:image" content="https://ic.pics.livejournal.com/dshalikov/78166202/818079/818079_original.jpg">
     <meta property="og:url" content="https://excurs21.github.io/yadrin-excurs/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c3e50; text-align: center; }
-
-        /* Кнопки */
-        .btn {
-            display: inline-block; padding: 15px 40px; text-decoration: none; border-radius: 50px;
-            font-weight: 700; font-size: 1.1rem; letter-spacing: 1px; transition: all 0.3s ease;
-            border: none; cursor: pointer; font-family: 'Montserrat', sans-serif;
+        :root {
+            --gold: #c9983a;
+            --gold-hover: #a87a2a;
+            --gold-light: #fdf6ec;
+            --brown-dark: #3e2723;
+            --text: #333;
+            --text-light: #666;
+            --white: #fff;
+            --border: #e0d5c0;
         }
-        .btn-primary { background-color: #c9983a; color: white; box-shadow: 0 5px 15px rgba(201, 152, 58, 0.4); }
-        .btn-primary:hover { background-color: #a87a2a; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(201, 152, 58, 0.6); }
-        .btn-outline { background: transparent; color: white; border: 2px solid white; box-shadow: 0 0 20px rgba(255,255,255,0.2); }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: var(--text); background-color: #f9f9f9; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--brown-dark); text-align: center; }
+
+        .btn { display: inline-block; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1rem; letter-spacing: 1px; transition: all 0.3s ease; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif; }
+        .btn-primary { background-color: var(--gold); color: var(--white); box-shadow: 0 5px 15px rgba(201,152,58,0.4); }
+        .btn-primary:hover { background-color: var(--gold-hover); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(201,152,58,0.6); }
+        .btn-outline { background: transparent; color: var(--white); border: 2px solid var(--white); box-shadow: 0 0 20px rgba(255,255,255,0.2); }
         .btn-outline:hover { background: rgba(255,255,255,0.1); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(255,255,255,0.3); }
-        .btn-gold { background-color: #f1c40f; color: #2c3e50; box-shadow: 0 5px 15px rgba(241, 196, 15, 0.4); }
-        .btn-gold:hover { background-color: #d4a90e; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(241, 196, 15, 0.6); }
-        .btn-white { background: white; color: #8e44ad; margin: 0; }
-        .btn-white:hover { background: #f0f0f0; }
+        .btn-white { background: var(--white); color: var(--gold); }
+        .btn-white:hover { background: #f0f0f0; transform: translateY(-3px); }
 
         /* Hero */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)), 
-                        url('https://ic.pics.livejournal.com/dshalikov/78166202/818079/818079_original.jpg') center/cover no-repeat;
-            display: flex; align-items: center; justify-content: center; text-align: center;
-            color: white; padding: 80px 20px; min-height: 600px;
-        }
+        .hero { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)), url('https://ic.pics.livejournal.com/dshalikov/78166202/818079/818079_original.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white); padding: 80px 20px; min-height: 600px; }
         .hero-content { animation: fadeInUp 1s ease-out; max-width: 800px; }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 1.5rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
         .hero .subtitle { font-size: 1.4rem; margin-bottom: 2rem; font-weight: 400; text-shadow: 1px 1px 5px rgba(0,0,0,0.7); }
@@ -56,13 +51,13 @@
 
         /* Преимущества */
         .highlights { display: flex; justify-content: space-around; flex-wrap: wrap; margin: -50px auto 50px; position: relative; z-index: 10; }
-        .highlight-card { background: white; flex: 1; min-width: 220px; margin: 0 10px; padding: 30px 20px; text-align: center; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+        .highlight-card { background: var(--white); flex: 1; min-width: 220px; margin: 0 10px; padding: 30px 20px; text-align: center; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
         .highlight-card:hover { transform: translateY(-10px); }
-        .highlight-card .icon { font-size: 2.5rem; margin-bottom: 15px; width: 60px; height: 60px; background: #f1c40f; color: #2c3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-left: auto; margin-right: auto; }
-        .highlight-card h3 { font-family: 'Playfair Display', serif; color: #8e44ad; margin-bottom: 10px; }
+        .highlight-card .icon { font-size: 2.5rem; margin-bottom: 15px; width: 60px; height: 60px; background: var(--gold); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-left: auto; margin-right: auto; }
+        .highlight-card h3 { font-family: 'Playfair Display', serif; color: var(--brown-dark); margin-bottom: 10px; }
 
         /* О маршруте */
-        .about { padding: 80px 0; background: white; }
+        .about { padding: 80px 0; background: var(--white); }
         .about-grid { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
         .about-text { flex: 1; min-width: 300px; }
         .about-text h2 { text-align: left; }
@@ -70,102 +65,103 @@
         .about-image img { width: 100%; height: auto; display: block; }
 
         /* Карта */
-        .map-section { padding: 80px 0; background: #f4f0f8; }
+        .map-section { padding: 80px 0; background: var(--gold-light); }
         .map-wrapper { border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); max-width: 1100px; margin: 0 auto; }
         .map-wrapper iframe { width: 100%; height: 500px; border: none; display: block; }
-        .map-caption { text-align: center; margin-top: 15px; color: #888; font-size: 0.9rem; }
+        .map-caption { text-align: center; margin-top: 15px; color: var(--text-light); font-size: 0.9rem; }
 
         /* Галерея */
-        .gallery { padding: 80px 0; background: white; }
+        .gallery { padding: 80px 0; background: var(--white); }
         .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         .gallery-item { position: relative; border-radius: 15px; overflow: hidden; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.3s ease; aspect-ratio: 4/3; }
         .gallery-item:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
         .gallery-item:hover img { transform: scale(1.1); }
-        .gallery-item .caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; padding: 20px 15px 15px; font-size: 0.9rem; font-weight: 600; opacity: 0; transition: opacity 0.3s ease; }
+        .gallery-item .caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: var(--white); padding: 20px 15px 15px; font-size: 0.9rem; font-weight: 600; opacity: 0; transition: opacity 0.3s ease; }
         .gallery-item:hover .caption { opacity: 1; }
 
         /* Лайтбокс */
         .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; flex-direction: column; }
         .lightbox.active { display: flex; }
         .lightbox img { max-width: 90%; max-height: 80vh; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
-        .lightbox .lightbox-caption { color: white; margin-top: 20px; font-size: 1.1rem; text-align: center; padding: 0 20px; }
-        .lightbox .close { position: absolute; top: 20px; right: 30px; color: white; font-size: 3rem; cursor: pointer; z-index: 1001; }
+        .lightbox .lightbox-caption { color: var(--white); margin-top: 20px; font-size: 1.1rem; text-align: center; padding: 0 20px; }
+        .lightbox .close { position: absolute; top: 20px; right: 30px; color: var(--white); font-size: 3rem; cursor: pointer; z-index: 1001; }
         .lightbox .close:hover { transform: scale(1.2); }
-        .lightbox .nav { position: absolute; top: 50%; transform: translateY(-50%); color: white; font-size: 3rem; cursor: pointer; padding: 20px; z-index: 1001; }
-        .lightbox .nav:hover { color: #8e44ad; }
+        .lightbox .nav { position: absolute; top: 50%; transform: translateY(-50%); color: var(--white); font-size: 3rem; cursor: pointer; padding: 20px; z-index: 1001; }
+        .lightbox .nav:hover { color: var(--gold); }
         .lightbox .prev { left: 20px; }
         .lightbox .next { right: 20px; }
 
         /* Гид */
-        .guide { padding: 80px 0; background: #f4f0f8; text-align: center; }
-        .guide-card { display: inline-block; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 400px; }
-        .guide-card img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 5px solid #8e44ad; }
+        .guide { padding: 80px 0; background: var(--gold-light); text-align: center; }
+        .guide-card { display: inline-block; background: var(--white); padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 400px; }
+        .guide-card img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 5px solid var(--gold); }
         .guide-card h3 { font-family: 'Playfair Display', serif; }
 
         /* Цена */
-        .pricing { padding: 80px 0; background: white; text-align: center; }
-        .price-box { display: inline-block; background: #2c3e50; color: white; padding: 40px 60px; border-radius: 20px; margin: 20px 0; }
-        .price { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 700; color: #f1c40f; }
+        .pricing { padding: 80px 0; background: var(--white); text-align: center; }
+        .price-box { display: inline-block; background: var(--brown-dark); color: var(--white); padding: 40px 60px; border-radius: 20px; margin: 20px 0; }
+        .price { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 700; color: var(--gold); }
         .details { list-style: none; padding: 0; margin: 20px 0; text-align: left; display: inline-block; }
         .details li { padding: 5px 0; }
 
         /* Футер */
-        .footer { background: #1a252f; color: white; text-align: center; padding: 25px 25px 100px 25px; font-size: 0.9rem; }
+        .footer { background: var(--brown-dark); color: var(--white); text-align: center; padding: 25px 25px 100px 25px; font-size: 0.9rem; }
 
         /* Кнопки на странице */
-        .faq-button { position: fixed; bottom: 90px; right: 30px; background: #8e44ad; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 98; display: flex; align-items: center; justify-content: center; }
-        .faq-button:hover { background: #6c3483; transform: scale(1.1); }
+        .faq-button { position: fixed; bottom: 90px; right: 30px; background: var(--gold); color: var(--white); border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 98; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
+        .faq-button:hover { background: var(--gold-hover); transform: scale(1.1); }
+        .btn-up { position: fixed; bottom: 30px; right: 30px; background: var(--gold); color: var(--white); border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 99; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
+        .btn-up:hover { background: var(--gold-hover); transform: scale(1.1); }
 
         /* Модальные окна */
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; align-items: center; justify-content: center; }
         .modal.active { display: flex; }
-        .modal-content { background: white; border-radius: 20px; padding: 40px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; box-shadow: 0 20px 50px rgba(0,0,0,0.3); animation: modalSlideIn 0.4s ease-out; position: relative; }
+        .modal-content { background: var(--white); border-radius: 20px; padding: 40px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; box-shadow: 0 20px 50px rgba(0,0,0,0.3); animation: modalSlideIn 0.4s ease-out; position: relative; }
         @keyframes modalSlideIn { from { opacity: 0; transform: translateY(-30px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
         .modal-close { position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 2rem; cursor: pointer; color: #999; }
-        .modal-close:hover { color: #333; }
-        .modal h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #2c3e50; margin-bottom: 25px; text-align: center; padding-right: 30px; }
+        .modal-close:hover { color: var(--text); }
+        .modal h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--brown-dark); margin-bottom: 25px; text-align: center; padding-right: 30px; }
 
-        /* Программа в модальном окне */
-        .program-item { display: flex; margin-bottom: 15px; background: #f9f9f9; border-radius: 10px; padding: 15px 20px; border-left: 4px solid #27ae60; gap: 15px; align-items: flex-start; }
-        .program-time { font-weight: 700; color: #27ae60; min-width: 70px; font-size: 0.9rem; }
-        .program-name { font-weight: 600; color: #2c3e50; min-width: 200px; font-size: 0.95rem; }
-        .program-desc { color: #666; font-size: 0.85rem; }
+        /* Программа */
+        .program-item { display: flex; margin-bottom: 15px; background: #f9f9f9; border-radius: 10px; padding: 15px 20px; border-left: 4px solid var(--gold); gap: 15px; align-items: flex-start; }
+        .program-time { font-weight: 700; color: var(--gold); min-width: 70px; font-size: 0.9rem; }
+        .program-name { font-weight: 600; color: var(--text); min-width: 200px; font-size: 0.95rem; }
+        .program-desc { color: var(--text-light); font-size: 0.85rem; }
 
         /* FAQ */
-        .faq-category { text-align: center; color: #8e44ad; font-weight: 600; margin: 25px 0 15px; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; }
-        .faq-item { background: #f9f9f9; border-radius: 10px; padding: 15px 20px; margin-bottom: 10px; border: 1px solid #e0e0e0; }
-        .faq-item:hover { border-color: #8e44ad; box-shadow: 0 2px 8px rgba(142,68,173,0.1); }
-        .faq-item summary { font-weight: 600; color: #2c3e50; cursor: pointer; }
-        .faq-item summary:hover { color: #8e44ad; }
-        .faq-item p { margin-top: 10px; color: #666; font-size: 0.95rem; }
+        .faq-category { text-align: center; color: var(--gold); font-weight: 600; margin: 25px 0 15px; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; }
+        .faq-item { background: #f9f9f9; border-radius: 10px; padding: 15px 20px; margin-bottom: 10px; border: 1px solid var(--border); }
+        .faq-item:hover { border-color: var(--gold); box-shadow: 0 2px 8px rgba(201,152,58,0.1); }
+        .faq-item summary { font-weight: 600; color: var(--text); cursor: pointer; }
+        .faq-item summary:hover { color: var(--gold); }
+        .faq-item p { margin-top: 10px; color: var(--text-light); font-size: 0.95rem; }
 
         /* CTA модальное окно */
-        .cta-modal-content { background: linear-gradient(to right, #8e44ad, #6c3483); color: white; text-align: center; }
-        .cta-modal-content h3 { color: white; padding-right: 30px; }
+        .cta-modal-content { background: linear-gradient(to right, var(--brown-dark), #5d4037); color: var(--white); text-align: center; }
+        .cta-modal-content h3 { color: var(--white); padding-right: 30px; }
         .cta-modal-content .cta-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
         .cta-note { margin-top: 20px; font-size: 0.8rem; opacity: 0.7; }
-        .cta-phone { color: white; border: 2px solid white; padding: 13px 35px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; display: inline-block; }
-        .cta-phone:hover { background: rgba(255,255,255,0.1); }
+        .cta-phone { color: var(--white); border: 2px solid var(--gold); padding: 13px 35px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; display: inline-block; }
+        .cta-phone:hover { background: rgba(201,152,58,0.2); border-color: var(--white); }
 
         /* Инфо-окна */
-        .info-modal-icon { width: 70px; height: 70px; background: #f1c40f; color: #2c3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 15px; }
-        .info-modal-content h3 { margin-bottom: 15px; }
-        .info-modal-content p { font-size: 0.95rem; color: #555; line-height: 1.7; margin-bottom: 12px; text-align: left; }
+        .info-modal-icon { width: 70px; height: 70px; background: var(--gold); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 15px; }
+        .info-modal-content p { font-size: 0.95rem; color: var(--text-light); line-height: 1.7; margin-bottom: 12px; text-align: left; }
         .info-modal-content ul { text-align: left; padding-left: 20px; margin-bottom: 15px; }
-        .info-modal-content ul li { font-size: 0.9rem; color: #555; margin-bottom: 8px; }
-        .btn-close-modal { display: inline-block; background: #8e44ad; color: white; border: none; padding: 10px 30px; border-radius: 50px; cursor: pointer; font-weight: 600; margin-top: 10px; }
-        .btn-close-modal:hover { background: #6c3483; }
+        .info-modal-content ul li { font-size: 0.9rem; color: var(--text-light); margin-bottom: 8px; }
+        .btn-close-modal { display: inline-block; background: var(--gold); color: var(--white); border: none; padding: 10px 30px; border-radius: 50px; cursor: pointer; font-weight: 600; margin-top: 10px; transition: background 0.3s ease; }
+        .btn-close-modal:hover { background: var(--gold-hover); }
 
         /* Отзывы */
-        .testimonials { padding: 80px 0; background: #f4f0f8; }
+        .testimonials { padding: 80px 0; background: var(--white); }
         .testimonials-grid { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        .testimonial-card { flex: 1; min-width: 280px; max-width: 350px; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); position: relative; }
-        .testimonial-card .quote-icon { font-size: 4rem; color: #8e44ad; opacity: 0.15; position: absolute; top: 5px; left: 15px; font-family: 'Playfair Display', serif; pointer-events: none; z-index: 0; }
-        .testimonial-card .stars { color: #f1c40f; font-size: 1.1rem; margin-bottom: 12px; position: relative; z-index: 1; }
-        .testimonial-card p { font-size: 0.95rem; color: #555; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
-        .testimonial-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid #eee; padding-top: 15px; }
-        .testimonial-author .author-avatar { width: 45px; height: 45px; border-radius: 50%; background: #8e44ad; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+        .testimonial-card { flex: 1; min-width: 280px; max-width: 350px; background: #f9f9f9; padding: 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); position: relative; }
+        .testimonial-card .quote-icon { font-size: 4rem; color: var(--gold); opacity: 0.15; position: absolute; top: 5px; left: 15px; font-family: 'Playfair Display', serif; pointer-events: none; z-index: 0; }
+        .testimonial-card .stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 12px; position: relative; z-index: 1; }
+        .testimonial-card p { font-size: 0.95rem; color: var(--text-light); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+        .testimonial-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 15px; }
+        .testimonial-author .author-avatar { width: 45px; height: 45px; border-radius: 50%; background: var(--gold); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; }
         .testimonial-note { text-align: center; margin-top: 25px; padding: 12px 25px; background: #fff3cd; border: 1px solid #ffc107; border-radius: 10px; display: inline-block; font-size: 0.85rem; color: #856404; }
 
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
@@ -176,7 +172,9 @@
             .highlight-card { margin-bottom: 20px; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
             .map-wrapper iframe { height: 350px; }
-            .faq-button { bottom: 80px; right: 20px; }
+            .faq-button, .btn-up { right: 20px; }
+            .faq-button { bottom: 80px; }
+            .btn-up { bottom: 30px; }
             .testimonial-card { min-width: 100%; }
             .hero-cta-buttons { flex-direction: column; align-items: center; }
             .cta-buttons { flex-direction: column; align-items: center; }
@@ -188,7 +186,6 @@
 </head>
 <body>
 
-    <!-- 1. Главный экран -->
     <header class="hero">
         <div class="hero-content">
             <div class="badge">🏛️ 435 лет истории</div>
@@ -205,148 +202,104 @@
         </div>
     </header>
 
-    <!-- Модальное окно призыва к действию -->
-    <div class="modal cta-modal" id="ctaModal">
-        <div class="modal-content cta-modal-content">
-            <button class="modal-close" onclick="closeCtaModal()" style="color: rgba(255,255,255,0.7);">&times;</button>
-            <h3>Готовы открывать тайны старых фундаментов?</h3>
-            <p style="font-size: 1.1rem; opacity: 0.9;">Присоединяйтесь к экскурсии и откройте для себя Ядрин с новой стороны!</p>
-            <div class="cta-buttons">
-                <a href="form.html" class="btn btn-white">Записаться на экскурсию</a>
-                <a href="tel:+79083065835" class="cta-phone">📞 Позвонить</a>
-            </div>
-            <p class="cta-note">* Количество мест ограничено. Бронируйте заранее!</p>
-        </div>
-    </div>
+    <!-- CTA модалка -->
+    <div class="modal cta-modal" id="ctaModal"><div class="modal-content cta-modal-content"><button class="modal-close" onclick="closeCtaModal()" style="color: rgba(255,255,255,0.7);">&times;</button><h3>Готовы открывать тайны старых фундаментов?</h3><p style="font-size: 1.1rem; opacity: 0.9;">Присоединяйтесь к экскурсии и откройте для себя Ядрин с новой стороны!</p><div class="cta-buttons"><a href="form.html" class="btn btn-white">Записаться на экскурсию</a><a href="tel:+79083065835" class="cta-phone">📞 Позвонить</a></div><p class="cta-note">* Количество мест ограничено. Бронируйте заранее!</p></div></div>
 
-    <!-- Модальное окно программы экскурсии -->
-    <div class="modal" id="programModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeProgramModal()">&times;</button>
-            <h3>Программа экскурсии</h3>
-            <div class="program-item"><span class="program-time">09:00</span><span class="program-name">🚌 Выезд из Чебоксар</span><span class="program-desc">Отправление от Пригородного автовокзала</span></div>
-            <div class="program-item"><span class="program-time">10:30</span><span class="program-name">🌳 Парк «Старый город»</span><span class="program-desc">Топиарные медведи, вид на Суру, история съёмок «Дерсу Узала»</span></div>
-            <div class="program-item"><span class="program-time">10:50</span><span class="program-name">✈️ Самолёт L-29 «Дельфин»</span><span class="program-desc">Памятник Герою Советского Союза Ф. Орлову</span></div>
-            <div class="program-item"><span class="program-time">11:10</span><span class="program-name">🏠 Дом-музей Н.Д. Мордвинова</span><span class="program-desc">Купеческий дом 1880 г., родословная и творчество актёра</span></div>
-            <div class="program-item"><span class="program-time">11:30</span><span class="program-name">⛪ Алексеевская церковь</span><span class="program-desc">Пятиглавый храм 1856 г. и старое кладбище</span></div>
-            <div class="program-item"><span class="program-time">11:50</span><span class="program-name">🏢 Дома Бурашникова и Железнова</span><span class="program-desc">Купеческое соперничество в архитектуре, Музей хмеля</span></div>
-            <div class="program-item"><span class="program-time">12:10</span><span class="program-name">🔥 Площадь Победы</span><span class="program-desc">Мемориал с Вечным огнём и пушкой ЗИС-3</span></div>
-            <div class="program-item"><span class="program-time">12:30</span><span class="program-name">⛪ Свято-Троицкий собор</span><span class="program-desc">Главная жемчужина Ядрина, федеральный памятник</span></div>
-            <div class="program-item"><span class="program-time">13:00</span><span class="program-name">🏥 Глазная лечебница</span><span class="program-desc">Художественно-краеведческий музей</span></div>
-            <div class="program-item"><span class="program-time">13:30</span><span class="program-name">🏫 Реальное училище</span><span class="program-desc">Национальная гимназия им. Н. Мордвинова</span></div>
-            <div class="program-item"><span class="program-time">14:00</span><span class="program-name">🏭 Янибяковская усадьба</span><span class="program-desc">Спиртзавод братьев Таланцевых</span></div>
-            <div class="program-item"><span class="program-time">14:30</span><span class="program-name">🚌 Возвращение в Чебоксары</span><span class="program-desc">Подведение итогов, ответы на вопросы</span></div>
-        </div>
-    </div>
+    <!-- Программа модалка -->
+    <div class="modal" id="programModal"><div class="modal-content"><button class="modal-close" onclick="closeProgramModal()">&times;</button><h3>Программа экскурсии</h3>
+        <div class="program-item"><span class="program-time">09:00</span><span class="program-name">🚌 Выезд из Чебоксар</span><span class="program-desc">Отправление от Пригородного автовокзала</span></div>
+        <div class="program-item"><span class="program-time">10:30</span><span class="program-name">🌳 Парк «Старый город»</span><span class="program-desc">Топиарные медведи, вид на Суру, «Дерсу Узала»</span></div>
+        <div class="program-item"><span class="program-time">10:50</span><span class="program-name">✈️ Самолёт L-29 «Дельфин»</span><span class="program-desc">Памятник Герою Советского Союза Ф. Орлову</span></div>
+        <div class="program-item"><span class="program-time">11:10</span><span class="program-name">🏠 Дом-музей Н.Д. Мордвинова</span><span class="program-desc">Купеческий дом 1880 г., родословная и творчество</span></div>
+        <div class="program-item"><span class="program-time">11:30</span><span class="program-name">⛪ Алексеевская церковь</span><span class="program-desc">Пятиглавый храм 1856 г. и старое кладбище</span></div>
+        <div class="program-item"><span class="program-time">11:50</span><span class="program-name">🏢 Дома Бурашникова и Железнова</span><span class="program-desc">Купеческое соперничество, Музей хмеля</span></div>
+        <div class="program-item"><span class="program-time">12:10</span><span class="program-name">🔥 Площадь Победы</span><span class="program-desc">Мемориал с Вечным огнём и пушкой ЗИС-3</span></div>
+        <div class="program-item"><span class="program-time">12:30</span><span class="program-name">⛪ Свято-Троицкий собор</span><span class="program-desc">Главная жемчужина Ядрина, федеральный памятник</span></div>
+        <div class="program-item"><span class="program-time">13:00</span><span class="program-name">🏥 Глазная лечебница</span><span class="program-desc">Художественно-краеведческий музей</span></div>
+        <div class="program-item"><span class="program-time">13:30</span><span class="program-name">🏫 Реальное училище</span><span class="program-desc">Национальная гимназия им. Н. Мордвинова</span></div>
+        <div class="program-item"><span class="program-time">14:00</span><span class="program-name">🏭 Янибяковская усадьба</span><span class="program-desc">Спиртзавод братьев Таланцевых</span></div>
+        <div class="program-item"><span class="program-time">14:30</span><span class="program-name">🚌 Возвращение в Чебоксары</span><span class="program-desc">Подведение итогов, ответы на вопросы</span></div>
+    </div></div>
 
-    <!-- 2. Ключевые преимущества -->
+    <!-- Преимущества -->
     <div class="container highlights">
-        <div class="highlight-card" onclick="openInfoModal('objects')" style="cursor: pointer;">
-            <div class="icon">🏛️</div>
-            <h3>16 объектов</h3>
-            <p>От парка «Старый город» до спиртзавода Таланцевых</p>
-        </div>
-        <div class="highlight-card" onclick="openInfoModal('history')" style="cursor: pointer;">
-            <div class="icon">📜</div>
-            <h3>Купеческая история</h3>
-            <p>Династии Мордвиновых, Таланцевых, Бурашниковых</p>
-        </div>
-        <div class="highlight-card" onclick="openInfoModal('people')" style="cursor: pointer;">
-            <div class="icon">🎭</div>
-            <h3>Знаменитые имена</h3>
-            <p>Народный артист СССР Н. Мордвинов, кинорежиссёр А. Куросава</p>
-        </div>
+        <div class="highlight-card" onclick="openInfoModal('objects')" style="cursor: pointer;"><div class="icon">🏛️</div><h3>16 объектов</h3><p>От парка «Старый город» до спиртзавода Таланцевых</p></div>
+        <div class="highlight-card" onclick="openInfoModal('history')" style="cursor: pointer;"><div class="icon">📜</div><h3>Купеческая история</h3><p>Династии Мордвиновых, Таланцевых, Бурашниковых</p></div>
+        <div class="highlight-card" onclick="openInfoModal('people')" style="cursor: pointer;"><div class="icon">🎭</div><h3>Знаменитые имена</h3><p>Народный артист СССР Н. Мордвинов, кинорежиссёр А. Куросава</p></div>
     </div>
     
-    <!-- Модальные окна преимуществ -->
-    <div class="modal info-modal" id="modal-objects"><div class="modal-content info-modal-content"><button class="modal-close" onclick="closeInfoModal('objects')">&times;</button><div class="info-modal-icon">🏛️</div><h3>16 объектов маршрута</h3><p>За время экскурсии вы увидите:</p><ul><li>Парк «Старый город» — современное благоустройство с видом на Суру</li><li>Самолёт L-29 «Дельфин» — памятник лётчику Ф. Орлову</li><li>Дом-музей Н.Д. Мордвинова — купеческий дом 1880 года</li><li>Алексеевская церковь — пятиглавый храм 1856 года</li><li>Дома Бурашникова и Железнова — купеческое соперничество в камне</li><li>Площадь Победы — мемориал с Вечным огнём</li><li>Свято-Троицкий собор — памятник федерального значения</li><li>Глазная лечебница — музей и картинная галерея</li><li>Реальное училище — ныне национальная гимназия</li><li>Янибяковская усадьба — спиртзавод и жилой корпус</li></ul><button class="btn-close-modal" onclick="closeInfoModal('objects')">Понятно</button></div></div>
-    <div class="modal info-modal" id="modal-history"><div class="modal-content info-modal-content"><button class="modal-close" onclick="closeInfoModal('history')">&times;</button><div class="info-modal-icon">📜</div><h3>Купеческая история Ядрина</h3><p>Ядрин был одним из значимых купеческих городов Чувашии. Три династии определили его облик:</p><ul><li><strong>Таланцевы</strong> — промышленники и меценаты.</li><li><strong>Мордвиновы</strong> — купцы 2-й гильдии.</li><li><strong>Бурашниковы</strong> — лесопромышленники.</li></ul><button class="btn-close-modal" onclick="closeInfoModal('history')">Понятно</button></div></div>
-    <div class="modal info-modal" id="modal-people"><div class="modal-content info-modal-content"><button class="modal-close" onclick="closeInfoModal('people')">&times;</button><div class="info-modal-icon">🎭</div><h3>Знаменитые люди</h3><ul><li><strong>Николай Мордвинов</strong> (1901–1966) — народный артист СССР.</li><li><strong>Акира Куросава</strong> (1910–1998) — режиссёр, снимал «Дерсу Узала» на Суре.</li><li><strong>Федот Орлов</strong> (1913–1988) — Герой Советского Союза, лётчик.</li><li><strong>Тани Юн</strong> (1903–1977) — первая чувашская киноактриса.</li></ul><button class="btn-close-modal" onclick="closeInfoModal('people')">Понятно</button></div></div>
+    <!-- Инфо-модалки -->
+    <div class="modal info-modal" id="modal-objects"><div class="modal-content info-modal-content"><button class="modal-close" onclick="closeInfoModal('objects')">&times;</button><div class="info-modal-icon">🏛️</div><h3>16 объектов маршрута</h3><p>За время экскурсии вы увидите:</p><ul><li>Парк «Старый город» — благоустройство с видом на Суру</li><li>Самолёт L-29 «Дельфин» — памятник лётчику Ф. Орлову</li><li>Дом-музей Н.Д. Мордвинова — купеческий дом 1880 года</li><li>Алексеевская церковь — храм 1856 года</li><li>Дома Бурашникова и Железнова — купеческое соперничество</li><li>Площадь Победы — мемориал с Вечным огнём</li><li>Свято-Троицкий собор — федеральный памятник</li><li>Глазная лечебница — музей и галерея</li><li>Реальное училище — национальная гимназия</li><li>Янибяковская усадьба — спиртзавод Таланцевых</li></ul><button class="btn-close-modal" onclick="closeInfoModal('objects')">Понятно</button></div></div>
+    <div class="modal info-modal" id="modal-history"><div class="modal-content info-modal-content"><button class="modal-close" onclick="closeInfoModal('history')">&times;</button><div class="info-modal-icon">📜</div><h3>Купеческая история</h3><p>Три династии определили облик Ядрина:</p><ul><li><strong>Таланцевы</strong> — промышленники и меценаты</li><li><strong>Мордвиновы</strong> — купцы 2-й гильдии</li><li><strong>Бурашниковы</strong> — лесопромышленники</li></ul><button class="btn-close-modal" onclick="closeInfoModal('history')">Понятно</button></div></div>
+    <div class="modal info-modal" id="modal-people"><div class="modal-content info-modal-content"><button class="modal-close" onclick="closeInfoModal('people')">&times;</button><div class="info-modal-icon">🎭</div><h3>Знаменитые люди</h3><ul><li><strong>Николай Мордвинов</strong> — народный артист СССР</li><li><strong>Акира Куросава</strong> — режиссёр, «Дерсу Узала»</li><li><strong>Федот Орлов</strong> — Герой Советского Союза, лётчик</li><li><strong>Тани Юн</strong> — первая чувашская киноактриса</li></ul><button class="btn-close-modal" onclick="closeInfoModal('people')">Понятно</button></div></div>
 
-    <!-- 3. О маршруте -->
-    <section class="about">
-        <div class="container about-grid">
-            <div class="about-text">
-                <h2>Погрузитесь в атмосферу уездного купеческого города</h2>
-                <p>Мы проедем 174 км от Чебоксар до Ядрина и обратно, чтобы увидеть уникальные памятники архитектуры XVIII–XX веков. Вы пройдете по старинным улицам, где каждый дом хранит историю купеческих династий, узнаете о судьбе семьи Таланцевых и увидите места, связанные с легендарным актёром Николаем Мордвиновым.</p>
-                <br>
-                <p><strong>В программе:</strong> Прогулка по историческому центру с осмотром ключевых памятников архитектуры XVIII–XX веков, включая объект культурного наследия федерального значения — Свято-Троицкий собор.</p>
-                <br>
-                <a href="#book" class="btn btn-primary">Хочу в Ядрин!</a>
-            </div>
-            <div class="about-image"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/809437/809437_original.jpg" alt="Историческая архитектура Ядрина"></div>
-        </div>
-    </section>
+    <!-- О маршруте -->
+    <section class="about"><div class="container about-grid"><div class="about-text"><h2>Погрузитесь в атмосферу уездного купеческого города</h2><p>Мы проедем 174 км от Чебоксар до Ядрина и обратно, чтобы увидеть уникальные памятники архитектуры XVIII–XX веков. Вы пройдете по старинным улицам, где каждый дом хранит историю купеческих династий.</p><br><p><strong>В программе:</strong> Прогулка по историческому центру с осмотром ключевых памятников архитектуры, включая Свято-Троицкий собор — объект культурного наследия федерального значения.</p><br><a href="#book" class="btn btn-primary">Хочу в Ядрин!</a></div><div class="about-image"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/809437/809437_original.jpg" alt="Историческая архитектура Ядрина"></div></div></section>
 
-    <!-- 4. За один день вы... -->
-    <section style="padding: 80px 0; background: white;">
-        <div class="container">
-            <h2>За один день вы...</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; padding: 0 20px;">
-                <div style="text-align: center; padding: 30px 20px;"><div style="font-size: 3rem; margin-bottom: 15px;">🕰️</div><h4 style="font-family: 'Playfair Display', serif; color: #2c3e50; font-size: 1.3rem; margin-bottom: 12px;">Провалитесь в прошлое</h4><p style="color: #666; font-size: 0.95rem;">Пройдёте по улицам, где каждый камень помнит купеческие династии.</p></div>
-                <div style="text-align: center; padding: 30px 20px;"><div style="font-size: 3rem; margin-bottom: 15px;">🏛️</div><h4 style="font-family: 'Playfair Display', serif; color: #2c3e50; font-size: 1.3rem; margin-bottom: 12px;">Прикоснётесь к величию</h4><p style="color: #666; font-size: 0.95rem;">Увидите Свято-Троицкий собор — памятник федерального значения.</p></div>
-                <div style="text-align: center; padding: 30px 20px;"><div style="font-size: 3rem; margin-bottom: 15px;">🌊</div><h4 style="font-family: 'Playfair Display', serif; color: #2c3e50; font-size: 1.3rem; margin-bottom: 12px;">Остановитесь и выдохнете</h4><p style="color: #666; font-size: 0.95rem;">Выйдете на берег Суры — где Куросава снимал «Дерсу Узала».</p></div>
-                <div style="text-align: center; padding: 30px 20px;"><div style="font-size: 3rem; margin-bottom: 15px;">💡</div><h4 style="font-family: 'Playfair Display', serif; color: #2c3e50; font-size: 1.3rem; margin-bottom: 12px;">Удивитесь масштабу личностей</h4><p style="color: #666; font-size: 0.95rem;">Узнаете, как одна семья Таланцевых изменила целый город.</p></div>
-            </div>
-        </div>
-    </section>
+    <!-- За один день -->
+    <section style="padding: 80px 0; background: var(--white);"><div class="container"><h2>За один день вы...</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto;">
+        <div style="text-align: center; padding: 30px 20px;"><div style="font-size: 3rem; margin-bottom: 15px;">🕰️</div><h4 style="font-family: 'Playfair Display', serif; color: var(--brown-dark); font-size: 1.3rem; margin-bottom: 12px;">Провалитесь в прошлое</h4><p style="color: var(--text-light);">Пройдёте по улицам, где каждый камень помнит купеческие династии.</p></div>
+        <div style="text-align: center; padding: 30px 20px;"><div style="font-size: 3rem; margin-bottom: 15px;">🏛️</div><h4 style="font-family: 'Playfair Display', serif; color: var(--brown-dark); font-size: 1.3rem; margin-bottom: 12px;">Прикоснётесь к величию</h4><p style="color: var(--text-light);">Увидите Свято-Троицкий собор — памятник федерального значения.</p></div>
+        <div style="text-align: center; padding: 30px 20px;"><div style="font-size: 3rem; margin-bottom: 15px;">🌊</div><h4 style="font-family: 'Playfair Display', serif; color: var(--brown-dark); font-size: 1.3rem; margin-bottom: 12px;">Остановитесь и выдохнете</h4><p style="color: var(--text-light);">Выйдете на берег Суры — где Куросава снимал «Дерсу Узала».</p></div>
+        <div style="text-align: center; padding: 30px 20px;"><div style="font-size: 3rem; margin-bottom: 15px;">💡</div><h4 style="font-family: 'Playfair Display', serif; color: var(--brown-dark); font-size: 1.3rem; margin-bottom: 12px;">Удивитесь масштабу личностей</h4><p style="color: var(--text-light);">Узнаете, как одна семья Таланцевых изменила целый город.</p></div>
+    </div></div></section>
 
-    <!-- 5. Карта -->
+    <!-- Карта -->
     <section class="map-section"><div class="container"><h2>Маршрут на карте</h2><div class="map-wrapper"><iframe src="https://yandex.ru/map-widget/v1/?ll=46.207217%2C55.936712&mode=routes&rtext=55.947003%2C46.209864~55.946930%2C46.202839~55.941708%2C46.204830~55.940864%2C46.206242~55.940298%2C46.201626~55.940063%2C46.200268~55.936879%2C46.206349~55.937087%2C46.206977~55.936644%2C46.207170~55.936289%2C46.206762~55.936186%2C46.207841~55.934228%2C46.208533~55.934065%2C46.206955~55.931161%2C46.201733~55.932467%2C46.209488~55.912068%2C46.219019~55.909664%2C46.216745&rtt=pd&z=15.05" width="100%" height="500" frameborder="0"></iframe></div><p class="map-caption">🗺️ На карте отмечен маршрут экскурсии</p></div></section>
 
-    <!-- 6. Галерея -->
+    <!-- Галерея -->
     <section class="gallery"><div class="container"><h2>Фотогалерея</h2><div class="gallery-grid" id="galleryGrid">
         <div class="gallery-item" onclick="openLightbox(0)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/837295/837295_original.jpg" alt="Краеведческий музей" loading="lazy"><div class="caption">Краеведческий музей</div></div>
         <div class="gallery-item" onclick="openLightbox(1)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/835617/835617_original.jpg" alt="Музей чувашского хмеля" loading="lazy"><div class="caption">Музей чувашского хмеля</div></div>
-        <div class="gallery-item" onclick="openLightbox(2)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/836097/836097_original.jpg" alt="Улицы старого Ядрина" loading="lazy"><div class="caption">Улицы старого Ядрина</div></div>
-        <div class="gallery-item" onclick="openLightbox(3)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/829071/829071_original.jpg" alt="Вид на реку Сура" loading="lazy"><div class="caption">Вид на р. Сура</div></div>
-        <div class="gallery-item" onclick="openLightbox(4)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/843662/843662_original.jpg" alt="Ядринская гимназия №1" loading="lazy"><div class="caption">Ядринская гимназия №1</div></div>
+        <div class="gallery-item" onclick="openLightbox(2)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/836097/836097_original.jpg" alt="Улицы" loading="lazy"><div class="caption">Улицы старого Ядрина</div></div>
+        <div class="gallery-item" onclick="openLightbox(3)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/829071/829071_original.jpg" alt="Сура" loading="lazy"><div class="caption">Вид на р. Сура</div></div>
+        <div class="gallery-item" onclick="openLightbox(4)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/843662/843662_original.jpg" alt="Гимназия" loading="lazy"><div class="caption">Ядринская гимназия №1</div></div>
         <div class="gallery-item" onclick="openLightbox(5)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/835989/835989_original.jpg" alt="Купеческая архитектура" loading="lazy"><div class="caption">Купеческая архитектура</div></div>
-        <div class="gallery-item" onclick="openLightbox(6)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/821880/821880_original.jpg" alt="Самолёт Л-29" loading="lazy"><div class="caption">Самолёт Л-29 «Дельфин»</div></div>
-        <div class="gallery-item" onclick="openLightbox(7)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/833690/833690_original.jpg" alt="Свято-Троицкий собор" loading="lazy"><div class="caption">Свято-Троицкий собор</div></div>
-        <div class="gallery-item" onclick="openLightbox(8)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/838421/838421_original.jpg" alt="Старое кладбище" loading="lazy"><div class="caption">Старое кладбище</div></div>
+        <div class="gallery-item" onclick="openLightbox(6)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/821880/821880_original.jpg" alt="Самолёт" loading="lazy"><div class="caption">Самолёт Л-29 «Дельфин»</div></div>
+        <div class="gallery-item" onclick="openLightbox(7)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/833690/833690_original.jpg" alt="Собор" loading="lazy"><div class="caption">Свято-Троицкий собор</div></div>
+        <div class="gallery-item" onclick="openLightbox(8)"><img src="https://ic.pics.livejournal.com/dshalikov/78166202/838421/838421_original.jpg" alt="Кладбище" loading="lazy"><div class="caption">Старое кладбище</div></div>
     </div></div></section>
     <div class="lightbox" id="lightbox"><span class="close" onclick="closeLightbox()">&times;</span><span class="nav prev" onclick="changePhoto(-1)">&#10094;</span><span class="nav next" onclick="changePhoto(1)">&#10095;</span><img src="" alt="" id="lightboxImg"><div class="lightbox-caption" id="lightboxCaption"></div></div>
 
-    <!-- 7. Кому подходит -->
-    <section style="padding: 70px 0; background-color: #f4f0f8;"><div class="container"><h2>Кому подходит эта экскурсия</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px;">
-        <div style="text-align: center; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);"><div style="width: 50px; height: 50px; background: #f1c40f; color: #2c3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin: 0 auto 15px;">1</div><h4 style="color: #2c3e50; margin-bottom: 8px;">Любителям истории</h4><p style="color: #666; font-size: 0.9rem;">Для тех, кто хочет увидеть настоящий купеческий быт.</p></div>
-        <div style="text-align: center; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);"><div style="width: 50px; height: 50px; background: #f1c40f; color: #2c3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin: 0 auto 15px;">2</div><h4 style="color: #2c3e50; margin-bottom: 8px;">Фотографам</h4><p style="color: #666; font-size: 0.9rem;">Старинные особняки и панорама Суры — идеальные кадры.</p></div>
-        <div style="text-align: center; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);"><div style="width: 50px; height: 50px; background: #f1c40f; color: #2c3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin: 0 auto 15px;">3</div><h4 style="color: #2c3e50; margin-bottom: 8px;">Путешественникам</h4><p style="color: #666; font-size: 0.9rem;">Чувашия за пределами Чебоксар — малые города с историей.</p></div>
-        <div style="text-align: center; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);"><div style="width: 50px; height: 50px; background: #f1c40f; color: #2c3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin: 0 auto 15px;">4</div><h4 style="color: #2c3e50; margin-bottom: 8px;">Семейным парам</h4><p style="color: #666; font-size: 0.9rem;">Неспешная прогулка, интересная и взрослым, и детям.</p></div>
+    <!-- Кому подходит -->
+    <section style="padding: 70px 0; background-color: var(--gold-light);"><div class="container"><h2>Кому подходит эта экскурсия</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px;">
+        <div style="text-align: center; padding: 25px; background: var(--white); border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);"><div style="width: 50px; height: 50px; background: var(--gold); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin: 0 auto 15px;">1</div><h4 style="color: var(--brown-dark); margin-bottom: 8px;">Любителям истории</h4><p style="color: var(--text-light); font-size: 0.9rem;">Настоящий купеческий быт и уникальные памятники.</p></div>
+        <div style="text-align: center; padding: 25px; background: var(--white); border-radius: 15px;"><div style="width: 50px; height: 50px; background: var(--gold); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin: 0 auto 15px;">2</div><h4 style="color: var(--brown-dark); margin-bottom: 8px;">Фотографам</h4><p style="color: var(--text-light); font-size: 0.9rem;">Старинные особняки и панорама Суры.</p></div>
+        <div style="text-align: center; padding: 25px; background: var(--white); border-radius: 15px;"><div style="width: 50px; height: 50px; background: var(--gold); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin: 0 auto 15px;">3</div><h4 style="color: var(--brown-dark); margin-bottom: 8px;">Путешественникам</h4><p style="color: var(--text-light); font-size: 0.9rem;">Чувашия за пределами Чебоксар.</p></div>
+        <div style="text-align: center; padding: 25px; background: var(--white); border-radius: 15px;"><div style="width: 50px; height: 50px; background: var(--gold); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin: 0 auto 15px;">4</div><h4 style="color: var(--brown-dark); margin-bottom: 8px;">Семейным парам</h4><p style="color: var(--text-light); font-size: 0.9rem;">Неспешная прогулка для взрослых и детей.</p></div>
     </div></div></section>
 
-    <!-- 8. Спецпредложения -->
-    <section style="padding: 80px 0; background: white;"><div class="container"><h2>Специальные предложения</h2><p style="text-align: center; color: #666; margin-bottom: 40px;">Выберите подходящий вариант</p><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
-        <div style="background: #f4f0f8; border: 1px solid #e0d5ea; border-radius: 15px; padding: 30px 25px; text-align: center;"><div style="width: 50px; height: 50px; background: #f1c40f; color: #2c3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin: 0 auto 15px;">1</div><h4 style="font-family: 'Playfair Display', serif; color: #8e44ad;">Студентам</h4><p style="color: #555; font-size: 0.9rem; margin-bottom: 15px;">Скидка 10% по студенческому билету</p><p style="font-size: 0.8rem; color: #999;">Промокод <strong>СТУДЕНТ10</strong></p></div>
-        <div style="background: #f4f0f8; border: 1px solid #e0d5ea; border-radius: 15px; padding: 30px 25px; text-align: center;"><div style="width: 50px; height: 50px; background: #f1c40f; color: #2c3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin: 0 auto 15px;">2</div><h4 style="font-family: 'Playfair Display', serif; color: #8e44ad;">Приведи друга</h4><p style="color: #555; font-size: 0.9rem; margin-bottom: 15px;">Скидка 15% для компании от 3 человек</p><p style="font-size: 0.8rem; color: #999;">Промокод <strong>ДРУЗЬЯ15</strong></p></div>
-        <div style="background: #f4f0f8; border: 1px solid #e0d5ea; border-radius: 15px; padding: 30px 25px; text-align: center;"><div style="width: 50px; height: 50px; background: #f1c40f; color: #2c3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin: 0 auto 15px;">3</div><h4 style="font-family: 'Playfair Display', serif; color: #8e44ad;">Фото-бонус</h4><p style="color: #555; font-size: 0.9rem; margin-bottom: 15px;">Скидка 20% на следующую экскурсию за 5 фото</p><p style="font-size: 0.8rem; color: #999;">Отправьте фото в Telegram</p></div>
+    <!-- Спецпредложения -->
+    <section style="padding: 80px 0; background: var(--white);"><div class="container"><h2>Специальные предложения</h2><p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">Выберите подходящий вариант</p><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
+        <div style="background: var(--gold-light); border: 1px solid var(--border); border-radius: 15px; padding: 30px 25px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(201,152,58,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"><div style="width: 50px; height: 50px; background: var(--gold); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin: 0 auto 15px;">1</div><h4 style="font-family: 'Playfair Display', serif; color: var(--gold); margin-bottom: 10px;">Студентам</h4><p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 15px;">Скидка 10% по студенческому билету</p><p style="font-size: 0.8rem; color: #999;">Промокод <strong style="color: var(--gold);">СТУДЕНТ10</strong></p></div>
+        <div style="background: var(--gold-light); border: 1px solid var(--border); border-radius: 15px; padding: 30px 25px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(201,152,58,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"><div style="width: 50px; height: 50px; background: var(--gold); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin: 0 auto 15px;">2</div><h4 style="font-family: 'Playfair Display', serif; color: var(--gold); margin-bottom: 10px;">Приведи друга</h4><p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 15px;">Скидка 15% для компании от 3 человек</p><p style="font-size: 0.8rem; color: #999;">Промокод <strong style="color: var(--gold);">ДРУЗЬЯ15</strong></p></div>
+        <div style="background: var(--gold-light); border: 1px solid var(--border); border-radius: 15px; padding: 30px 25px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(201,152,58,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"><div style="width: 50px; height: 50px; background: var(--gold); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin: 0 auto 15px;">3</div><h4 style="font-family: 'Playfair Display', serif; color: var(--gold); margin-bottom: 10px;">Фото-бонус</h4><p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 15px;">Скидка 20% на следующую экскурсию за 5 фото</p><p style="font-size: 0.8rem; color: #999;">Отправьте фото в Telegram</p></div>
     </div></div></section>
 
-    <!-- 9. Отзывы -->
+    <!-- Отзывы -->
     <section class="testimonials"><div class="container"><h2>Что говорят путешественники</h2><div class="testimonials-grid">
-        <div class="testimonial-card"><div class="quote-icon">«</div><div class="stars">★★★★★</div><p>Замечательная экскурсия! Столько интересных деталей о купеческом быте и архитектуре.</p><div class="testimonial-author"><div class="author-avatar">А</div><div class="author-info"><strong>Анна К.</strong><span>турист, апрель 2026</span></div></div></div>
+        <div class="testimonial-card"><div class="quote-icon">«</div><div class="stars">★★★★★</div><p>Замечательная экскурсия! Столько деталей о купеческом быте и архитектуре.</p><div class="testimonial-author"><div class="author-avatar">А</div><div class="author-info"><strong>Анна К.</strong><span>турист, апрель 2026</span></div></div></div>
         <div class="testimonial-card"><div class="quote-icon">«</div><div class="stars">★★★★★</div><p>Очень понравился маршрут! Прошли по местам, о которых я даже не знал.</p><div class="testimonial-author"><div class="author-avatar">М</div><div class="author-info"><strong>Михаил П.</strong><span>турист, май 2026</span></div></div></div>
-        <div class="testimonial-card"><div class="quote-icon">«</div><div class="stars">★★★★★</div><p>Экскурсия — отличный повод выбраться из Чебоксар и открыть для себя Ядрин.</p><div class="testimonial-author"><div class="author-avatar">Е</div><div class="author-info"><strong>Елена В.</strong><span>турист, март 2026</span></div></div></div>
+        <div class="testimonial-card"><div class="quote-icon">«</div><div class="stars">★★★★★</div><p>Отличный повод выбраться из Чебоксар и открыть для себя Ядрин.</p><div class="testimonial-author"><div class="author-avatar">Е</div><div class="author-info"><strong>Елена В.</strong><span>турист, март 2026</span></div></div></div>
     </div><div style="text-align: center; margin-top: 20px;"><p class="testimonial-note">⚠️ Учебные отзывы. Размещены для демонстрации.</p></div></div></section>
 
-    <!-- 10. Гид -->
+    <!-- Гид -->
     <section class="guide"><div class="container"><h2>Ваш экскурсовод</h2><div class="guide-card"><img src="https://m.media-amazon.com/images/M/MV5BOGY2OGY2MDctYTU4ZS00ZWUzLWFjYTktYjgyNDczM2VkYTZkXkEyXkFqcGdeQXVyMzAzOTUwOTY@._V1_QL75_UX820_.jpg" alt="Денис Леонтьев"><h3>Денис Леонтьев</h3><p>Историк-краевед, автор экскурсии. Студент кафедры социально-экономической географии и туризма ЧГУ им. И.Н. Ульянова.</p></div></div></section>
 
-    <!-- 11. Цена -->
+    <!-- Цена -->
     <section class="pricing" id="book"><div class="container"><h2>Детали и бронирование</h2><div class="price-box"><p style="font-size: 1.3rem;">Стоимость экскурсии</p><p class="price">от 2 500 ₽</p><p>за человека (ориентировочно)</p><ul class="details"><li>🚌 Трансфер Чебоксары – Ядрин – Чебоксары</li><li>👣 Пешеходная часть ~ 8,4 км</li><li>⏳ Общая продолжительность — 5,5 часов</li><li>📅 По предварительной записи</li><li>👥 Группы от 10 человек</li></ul><a href="form.html" class="btn btn-primary">Записаться на экскурсию</a><p style="margin-top: 20px; font-size: 0.85rem;">* Точная стоимость и даты согласовываются при бронировании.</p></div><p style="margin-top: 30px;">По всем вопросам: <strong>+7 (908) 306-58-35</strong> | <strong>ydrin-excurs21@gmail.com</strong></p></div></section>
 
-    <!-- 12. Футер -->
+    <!-- Футер -->
     <footer class="footer">
         <p>© 2026 Учебно-экскурсионный проект «Ядрин купеческий»</p>
         <p style="font-size: 0.8rem; margin-top: 5px;">Сайт создан в учебных целях в рамках дисциплины «Экскурсионное дело».<br>Не является публичной офертой.</p>
         <p style="font-size: 0.75rem; opacity: 0.6; margin-top: 10px;">ФГБОУ ВО «ЧГУ им. И.Н. Ульянова», историко-географический факультет<br>Автор: Леонтьев Д.А., группа ИГФ-41-23</p>
         <p style="font-size: 0.7rem; opacity: 0.5; margin-top: 10px;">Текст экскурсии: Леонтьев Д.А. (CC BY-NC 4.0)</p>
-        <p style="font-size: 0.7rem; opacity: 0.5; margin-top: 5px;">Фотографии: Дмитрий Шаликов (dshalikov), LiveJournal — <a href="https://dshalikov.livejournal.com" target="_blank" style="color: #aaa;">dshalikov.livejournal.com</a></p>
-        <p style="font-size: 0.75rem; margin-top: 15px; opacity: 0.6;"><a href="vladivostok-tour.pdf" style="color: #aaa;">🚢 Также предлагаем туры во Владивосток →</a></p>
+        <p style="font-size: 0.7rem; opacity: 0.5; margin-top: 5px;">Фотографии: Дмитрий Шаликов (dshalikov), LiveJournal — <a href="https://dshalikov.livejournal.com" target="_blank" style="color: var(--gold);">dshalikov.livejournal.com</a></p>
+        <p style="font-size: 0.75rem; margin-top: 15px; opacity: 0.6;"><a href="vladivostok-tour.pdf" style="color: var(--gold);">🚢 Также предлагаем туры во Владивосток →</a></p>
     </footer>
 
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="position: fixed; bottom: 30px; right: 30px; background: #8e44ad; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 99; display: flex; align-items: center; justify-content: center;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="Наверх">↑</button>
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn-up" title="Наверх">↑</button>
     <button class="faq-button" onclick="openFaqModal()" title="Частые вопросы">?</button>
 
     <!-- FAQ -->
@@ -394,10 +347,7 @@
         document.getElementById('programModal').addEventListener('click', function(e) { if (e.target === this) closeProgramModal(); });
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                ['lightbox','faqModal','ctaModal','programModal'].forEach(id => {
-                    const el = document.getElementById(id);
-                    if (el && el.classList.contains('active')) el.classList.remove('active');
-                });
+                ['lightbox','faqModal','ctaModal','programModal'].forEach(id => { const el = document.getElementById(id); if (el && el.classList.contains('active')) el.classList.remove('active'); });
                 document.querySelectorAll('.info-modal.active').forEach(m => m.classList.remove('active'));
                 document.body.style.overflow = '';
             }

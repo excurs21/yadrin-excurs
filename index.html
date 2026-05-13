@@ -283,6 +283,41 @@
         <div class="testimonial-card"><div class="quote-icon">|</div><div class="stars">★★★★★</div><p>Отличный повод выбраться из Чебоксар и открыть для себя Ядрин.</p><div class="testimonial-author"><div class="author-avatar">Е</div><div class="author-info"><strong>Елена В. </strong><span>турист, март 2026</span></div></div></div>
     </div><div style="text-align: center; margin-top: 20px;"><p class="testimonial-note">⚠️ Учебные отзывы. Размещены для демонстрации.</p></div></div></section>
 
+        <!-- Кнопка оставить отзыв -->
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="openReviewModal()" class="btn btn-primary">✍️ Оставить отзыв</button>
+    </div>
+
+    <!-- Модальное окно отзыва -->
+    <div class="modal" id="reviewModal">
+        <div class="modal-content" style="max-width: 500px;">
+            <button class="modal-close" onclick="closeReviewModal()">&times;</button>
+            <h3>Оставить отзыв</h3>
+            <form id="reviewForm" onsubmit="submitReview(event)">
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Ваше имя *</label>
+                    <input type="text" id="reviewName" required placeholder="Иван Иванов" style="width: 100%; padding: 12px; border: 2px solid #e0d5c0; border-radius: 10px; font-family: 'Montserrat', sans-serif; font-size: 1rem;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Ваша оценка *</label>
+                    <div id="starRating" style="display: flex; gap: 5px; font-size: 2rem; cursor: pointer;">
+                        <span onclick="setRating(1)" style="color: #e0d5c0;">★</span>
+                        <span onclick="setRating(2)" style="color: #e0d5c0;">★</span>
+                        <span onclick="setRating(3)" style="color: #e0d5c0;">★</span>
+                        <span onclick="setRating(4)" style="color: #e0d5c0;">★</span>
+                        <span onclick="setRating(5)" style="color: #e0d5c0;">★</span>
+                    </div>
+                    <input type="hidden" id="reviewRating" value="0">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Ваш отзыв *</label>
+                    <textarea id="reviewText" required placeholder="Поделитесь впечатлениями..." rows="4" style="width: 100%; padding: 12px; border: 2px solid #e0d5c0; border-radius: 10px; font-family: 'Montserrat', sans-serif; font-size: 1rem; resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Отправить отзыв</button>
+            </form>
+        </div>
+    </div>
+    
     <!-- Гид -->
     <section class="guide"><div class="container"><h2>Ваш экскурсовод</h2><div class="guide-card"><img src="https://m.media-amazon.com/images/M/MV5BOGY2OGY2MDctYTU4ZS00ZWUzLWFjYTktYjgyNDczM2VkYTZkXkEyXkFqcGdeQXVyMzAzOTUwOTY@._V1_QL75_UX820_.jpg" alt="Денис Леонтьев"><h3>Денис Леонтьев</h3><p>Ваш проводник в историю купеческого Ядрина. Изучаю край, в котором живу, и с радостью делюсь знаниями с гостями. Автор экскурсии. Студент историко-географического факультета ЧГУ им. И.Н. Ульянова. </p></div></div></section>
 
@@ -354,6 +389,42 @@
             const lightbox = document.getElementById('lightbox');
             if (lightbox && lightbox.classList.contains('active')) { if (e.key === 'ArrowLeft') changePhoto(-1); if (e.key === 'ArrowRight') changePhoto(1); }
         });
+                // Модальное окно отзыва
+        function openReviewModal() { document.getElementById('reviewModal').classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeReviewModal() { document.getElementById('reviewModal').classList.remove('active'); document.body.style.overflow = ''; }
+        document.getElementById('reviewModal').addEventListener('click', function(e) { if (e.target === this) closeReviewModal(); });
+
+        // Рейтинг звёздами
+        function setRating(rating) {
+            document.getElementById('reviewRating').value = rating;
+            const stars = document.querySelectorAll('#starRating span');
+            stars.forEach((star, index) => {
+                star.style.color = index < rating ? '#c9983a' : '#e0d5c0';
+            });
+        }
+
+        // Отправка отзыва
+        function submitReview(event) {
+            event.preventDefault();
+            const name = document.getElementById('reviewName').value;
+            const rating = document.getElementById('reviewRating').value;
+            const text = document.getElementById('reviewText').value;
+            
+            const subject = encodeURIComponent('Отзыв об экскурсии «Ядрин купеческий»');
+            const body = encodeURIComponent(
+                `Здравствуйте, Денис Анатольевич!\n\n` +
+                `Получен новый отзыв:\n\n` +
+                `👤 Имя: ${name}\n` +
+                `⭐ Оценка: ${'★'.repeat(rating)}${'☆'.repeat(5-rating)} (${rating}/5)\n` +
+                `💬 Отзыв: ${text}\n\n` +
+                `---\n` +
+                `Отправлено через сайт`
+            );
+            
+            window.location.href = `mailto:ydrin-excurs21@gmail.com?subject=${subject}&body=${body}`;
+            closeReviewModal();
+        }
+        
     </script>
 </body>
 </html>
